@@ -1,0 +1,9 @@
+- name: LinkedIn
+  link: https://www.linkedin.com/in/maxenceraoux/
+  icon: /assets/img/linkedin.svg
+- name: GitHub
+  link: https://github.com/Maouxi
+  icon: /assets/img/github.svg
+- name: AzureDevops
+  link: https://dev.azure.com/maxenceraoux/
+  icon: /assets/img/azuredevops.svg

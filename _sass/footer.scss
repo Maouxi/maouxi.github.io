@@ -1,0 +1,30 @@
+footer {
+    background-color: #fdfdfd;
+    box-shadow: 0px -1px 1px #eeeeee;
+    padding: 25px;
+
+    #social {
+        text-align: center;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        a:hover {
+            background-color: transparent;
+            img {
+                opacity: 100%;
+            }
+        }
+        img {
+            opacity: 30%;
+            width: 22px;
+            height: 22px;
+        }
+    }
+
+    #copyright {
+        text-align: center;
+        font-size: 14px;
+        color: #bbbbbb;
+    }
+}

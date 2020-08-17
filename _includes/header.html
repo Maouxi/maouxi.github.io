@@ -1,0 +1,13 @@
+<header id="navigation">
+    <h1><a href="/">Maoux</a></h1>
+    <nav>
+        {% for item in site.data.navigation %}
+
+        <a href="{{ item.link }}" {% if page.url == item.link %}class="current"
+            {% elsif page.url contains item.tag %}class="current" {% endif %}>
+            {{ item.name }}
+        </a>
+
+        {% endfor %}
+    </nav>
+</header>

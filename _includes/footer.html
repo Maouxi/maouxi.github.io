@@ -1,0 +1,10 @@
+<footer>
+
+    <div id="social">
+        {% for item in site.data.social-link %}
+        <a href="{{ item.link }}" target="_blank"><img src="{{ item.icon }}" alt="{{ item.name }}" /></a>
+        {% endfor %}
+    </div>
+
+    <p id="copyright">Maxence Raoux | 2020</p>
+</footer>
