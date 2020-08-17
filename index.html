@@ -5,16 +5,45 @@ title: Home
     <article class="content">
         <img src="/assets/img/home/profil.jfif" class="avatar" />
         <div class="home-header-content">
-            <h1>Maxence Raoux</h1>
-            <p>Ingénieur informatique - Développeur Android | .Net</p>
+            <h1>Maxence Raoux - <span id="myage">-</span> ans</h1>
+            <p>Ingénieur informatique - Développeur Android / .Net</p>
             <div class="home-header-tags">
-                {% for skill in site.data.skills %}
-                <p class="tag {{ skill.color }}">{{ skill.name }}</p>
+                {% assign favorite_skills = site.data.skills.skills | where: "fav", "true" %}
+                {% for skill in favorite_skills %}
+                <span class="tag-small {{ skill.category }}">{{ skill.name }}</span>
                 {% endfor %}
             </div>
         </div>
     </article>
 </div>
-<article class="content">
-    other content goes here
+<article class="content skill-container">
+    {% assign grouped_skills = site.data.skills.skills | group_by: "category" %}
+
+    {% for skill_group in grouped_skills %}
+    <div class='skill-item'>
+        {% assign category = site.data.skills.categories | where: "name", skill_group.name %}
+        {% assign sorted_skills = skill_group.items | sort: "stars" | reverse %}
+        <h2>{{ category.first.label }}</h2>
+        {% for skill in sorted_skills %}
+        <h3>
+            {{ skill.name }}
+            {% if skill.stars > 0 %}
+            <span>
+                {% for i in (skill.stars..4) %}
+                <span class="lvl-empty"></span>
+                {% endfor %}
+                {% for i in (1..skill.stars) %}
+                <span class="lvl-fill {{ skill_group.name }}"></span>
+                {% endfor %}
+
+            </span>
+            {% endif %}
+        </h3>
+        {% endfor %}
+    </div>
+    {% endfor %}
 </article>
+
+<script>
+    document.querySelector('#myage').innerHTML = Math.abs(new Date(Date.now() - new Date(1990, 4, 12).getTime()).getUTCFullYear() - 1970);
+</script>

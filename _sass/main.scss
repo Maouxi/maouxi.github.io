@@ -46,11 +46,20 @@ body {
     }
 }
 
-.tag {
+%tag-shared {
     padding: 5px 10px;
     border-radius: 10px;
     color: $text-primary-color-invert !important;
     margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.tag {
+    @extend %tag-shared;
+}
+.tag-small {
+    @extend %tag-shared;
+    font-size: 12px;
 }
 
 #page-header {
@@ -130,5 +139,60 @@ article {
     }
     p {
         margin-bottom: 5px;
+    }
+}
+
+@media (min-width: 800px) {
+    .skill-container {
+        display: flex;
+        width: 100%;
+        flex-flow: row wrap;
+
+        .skill-item {
+            width: 50%;
+            h3 {
+                padding: 5px 30px 5px 5px;
+            }
+        }
+    }
+}
+@media (max-width: 800px) {
+    .skill-container {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .skill-item {
+        h3 {
+            padding: 5px 5px 5px 5px;
+        }
+    }
+}
+
+.skill-container {
+    .skill-item {
+        margin-bottom: 15px;
+        h3 {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            font-size: 18px;
+            font-weight: normal;
+        }
+        %lvl-shared {
+            @extend %lvl-shared;
+            display: inline-block;
+            min-width: 10px;
+            min-height: 5px;
+            border-radius: 0%;
+        }
+        .lvl-fill {
+            @extend %lvl-shared;
+            background-color: $primary-color;
+        }
+        .lvl-empty {
+            @extend %lvl-shared;
+            background-color: $shadow;
+        }
     }
 }

@@ -9,14 +9,17 @@ $text-primary-light-color-invert: #fafafa;
 $text-primary-lighter-color: #bbbbbb;
 
 .language {
-    background-color: #42a5f5;
+    background-color: #42a5f5!important;
 }
 .framework {
-    background-color: #66bb6a;
+    background-color: #66bb6a!important;
 }
 .tools {
-    background-color: #ef5350;
+    background-color: #ef5350!important;
 }
 .architecture {
-    background-color: #7e57c2;
+    background-color: #7e57c2!important;
+}
+.test {
+    background-color: #90a4ae!important;
 }

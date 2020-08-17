@@ -1,20 +1,126 @@
-- name: Android
-  color: framework
-- name: Java
-  color: language
-- name: Kotlin
-  color: language
-- name: Azure
-  color: tools
-- name: .Net
-  color: framework
-- name: C#
-  color: language
-- name: Git
-  color: tools
-- name: MVVM
-  color: architecture
-- name: Dependency Injection
-  color: architecture
-- name: Azure Devops
-  color: tools
+categories:
+  - name: framework
+    label: Framework
+  - name: language
+    label: Language
+  - name: ide
+    label: IDE
+  - name: tools
+    label: Tools
+  - name: architecture
+    label: Architecture
+  - name: test
+    label: Testing
+skills:
+  - name: Android
+    category: framework
+    fav: true
+    stars: 5
+  - name: Android Jetpack
+    category: framework
+    stars: 5
+  - name: .Net
+    category: framework
+    fav: true
+    stars: 4
+  - name: UWP
+    category: framework
+    stars: 4
+  - name: Azure
+    category: framework
+    fav: true
+    stars: 3
+  - name: Flutter
+    category: framework
+    stars: 1
+  - name: Angular
+    category: framework
+    stars: 3
+  - name: Jekyll
+    category: framework
+    stars: 3
+  - name: Xamarin
+    category: framework
+    stars: 2
+
+  - name: Kotlin
+    category: language
+    fav: true
+    stars: 5
+  - name: Java
+    category: language
+    stars: 5
+  - name: C#
+    category: language
+    fav: true
+    stars: 5
+  - name: JavaScript - TypeScript
+    category: language
+    stars: 3
+  - name: Dart
+    category: language
+    stars: 1
+  - name: HTML - CSS
+    category: language
+    stars: 3
+  - name: PHP
+    category: language
+    stars: 2
+  - name: Python
+    category: language
+    stars: 2
+  - name: SQL
+    category: language
+    stars: 4
+
+  - name: Git
+    category: tools
+    fav: true
+    stars: 4
+  - name: SVN
+    category: tools
+    stars: 3
+  - name: Azure Devops
+    category: tools
+    fav: true
+    stars: 5
+  - name: Jenkins
+    category: tools
+    stars: 3
+  - name: Jira
+    category: tools
+    stars: 3
+  - name: Node-Red
+    category: tools
+    stars: 3
+
+  - name: MVVM
+    category: architecture
+  - name: MVC
+    category: architecture
+  - name: Dependency Injection
+    category: architecture
+  - name: Unit test
+    category: architecture
+
+  - name: Android studio
+    category: ide
+  - name: Visual Studio
+    category: ide
+  - name: Visual Studio Code
+    category: ide
+  - name: Unity
+    category: ide
+
+  - name: Unit (JUnit, MSTest...)
+    category: test
+  - name: Android Instrumented
+    category: test
+  - name: Appium
+    category: test
+  - name: Cucumber
+    category: test
+  - name: Gauge
+    category: test
+  - name: Selenium
+    category: test
