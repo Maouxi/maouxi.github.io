@@ -1,4 +1,20 @@
 ---
 title: Home
 ---
-<h1>{{ "Home page" | downcase }}</h1>
+<div class="home-header">
+    <article class="content">
+        <img src="/assets/img/home/profil.jfif" class="avatar" />
+        <div class="home-header-content">
+            <h1>Maxence Raoux</h1>
+            <p>Ingénieur informatique - Développeur Android | .Net</p>
+            <div class="home-header-tags">
+                {% for skill in site.data.skills %}
+                <p class="tag {{ skill.color }}">{{ skill.name }}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </article>
+</div>
+<article class="content">
+    other content goes here
+</article>

@@ -1,16 +1,16 @@
 header#navigation {
     display: flex;
-    background-color: #fdfdfd;
-    color: #121212;
+    background-color: $background-color;
+    color: $text-primary-color;
     padding: 30px;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 1px 1px #eeeeee;
+    box-shadow: 0px 1px 1px $shadow;
     h1 {
         font-size: 30px;
         a {
-            color: orange;
+            color: $primary-color;
         }
         a:hover {
             background-color: transparent;
@@ -22,10 +22,10 @@ header#navigation {
             font-size: 20px;
         }
         a:hover {
-            background-color: #e5e5e5;
+            background-color: $link-hover;
         }
         a.current {
-            color: orange;
+            color: $primary-color;
         }
     }
 }

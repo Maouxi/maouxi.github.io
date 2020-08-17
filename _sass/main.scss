@@ -5,11 +5,75 @@
 }
 
 body {
-    background-color: #fdfdfd;
-    color: #121212;
+    background-color: $background-color;
+    color: $text-primary-color;
 }
 
-#content {
+.avatar {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.home-header {
+    color: $text-primary-color-invert;
+    box-shadow: 0px 1px 1px $shadow;
+    background-image: url("/assets/img/background/header3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    article {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+
+        .home-header-content {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            margin-left: 20px;
+            p {
+                color: $text-primary-light-color-invert;
+                margin-bottom: 15px;
+            }
+            .home-header-tags {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: flex-start;
+            }
+        }
+    }
+}
+
+.tag {
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: $text-primary-color-invert !important;
+    margin-right: 10px;
+}
+
+#page-header {
+    display: flex;
+    padding: 60px 30px;
+    color: $text-primary-color-invert;
+    height: 120px;
+    flex-flow: column nowrap;
+    box-shadow: 0px 1px 1px $shadow;
+    justify-content: space-around;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/assets/img/background/header3.png");
+    h1 {
+        max-width: 800px;
+        margin: auto;
+    }
+}
+
+section,
+article {
     max-width: 800px;
     margin: auto;
     padding: 30px;
@@ -21,7 +85,7 @@ h1 {
 }
 
 a {
-    color: #121212;
+    color: $text-primary-color;
     text-decoration: none;
 }
 a:link {
@@ -29,14 +93,14 @@ a:link {
 }
 a:hover {
     text-decoration: none;
-    background-color: #e5e5e5;
+    background-color: $link-hover;
 }
 
 .list-item {
     h2 {
         a {
             font-size: 26px;
-            color: orange;
+            color: $primary-color;
             margin-bottom: 15px;
         }
     }
@@ -52,7 +116,7 @@ article {
         p {
             font-size: 16px;
             margin-bottom: 15px;
-            color: #bbbbbb;
+            color: $text-primary-lighter-color;
         }
     }
 

@@ -1,0 +1,20 @@
+- name: Android
+  color: framework
+- name: Java
+  color: language
+- name: Kotlin
+  color: language
+- name: Azure
+  color: tools
+- name: .Net
+  color: framework
+- name: C#
+  color: language
+- name: Git
+  color: tools
+- name: MVVM
+  color: architecture
+- name: Dependency Injection
+  color: architecture
+- name: Azure Devops
+  color: tools
