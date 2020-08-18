@@ -16,37 +16,48 @@ skills:
     category: framework
     fav: true
     stars: 5
+    link: https://www.android.com/
   - name: Android Jetpack
     category: framework
     stars: 5
+    link: https://developer.android.com/jetpack/
   - name: .Net
     category: framework
     fav: true
     stars: 4
+    link: https://dotnet.microsoft.com/
+  - name: ASP.Net
+    category: framework
+    fav: true
+    stars: 4
+    link: https://dotnet.microsoft.com/apps/aspnet
   - name: UWP
     category: framework
     stars: 4
+    link: https://docs.microsoft.com/en-Us/windows/uwp/
   - name: Azure
     category: framework
     fav: true
     stars: 3
+    link: https://azure.microsoft.com/
   - name: Flutter
     category: framework
     stars: 1
+    link: https://flutter.dev/
   - name: Angular
     category: framework
     stars: 3
-  - name: Jekyll
-    category: framework
-    stars: 3
+    link: https://angular.io/
   - name: Xamarin
     category: framework
     stars: 2
+    link: https://dotnet.microsoft.com/apps/xamarin
 
   - name: Kotlin
     category: language
     fav: true
     stars: 5
+    link: https://kotlinlang.org/
   - name: Java
     category: language
     stars: 5
@@ -57,6 +68,7 @@ skills:
   - name: JavaScript - TypeScript
     category: language
     stars: 3
+    link: https://www.typescriptlang.org/
   - name: Dart
     category: language
     stars: 1
@@ -77,6 +89,7 @@ skills:
     category: tools
     fav: true
     stars: 4
+    link: https://git-scm.com/
   - name: SVN
     category: tools
     stars: 3
@@ -84,6 +97,11 @@ skills:
     category: tools
     fav: true
     stars: 5
+    link: https://azure.microsoft.com/en-us/services/devops/
+  - name: Firebase
+    category: tools
+    stars: 3
+    link: https://firebase.google.com/
   - name: Jenkins
     category: tools
     stars: 3
@@ -94,33 +112,47 @@ skills:
     category: tools
     stars: 3
 
+  - name: Unit (JUnit, MSTest...)
+    category: test
+    stars: 5
+  - name: Android Instrumented
+    category: test
+    stars: 4
+  - name: Appium
+    category: test
+    stars: 3
+    link: https://appium.io/
+  - name: Cucumber
+    category: test
+    stars: 3
+    link: https://cucumber.io/
+  - name: Gauge
+    category: test
+    stars: 3
+    link: https://gauge.org/index.html
+  - name: Selenium
+    category: test
+    stars: 3
+  - name: Sonar
+    category: test
+    stars: 3
+
   - name: MVVM
     category: architecture
   - name: MVC
     category: architecture
   - name: Dependency Injection
     category: architecture
-  - name: Unit test
-    category: architecture
 
   - name: Android studio
     category: ide
+    link: https://developer.android.com/studio/
   - name: Visual Studio
     category: ide
+    lin: https://visualstudio.microsoft.com/fr/
   - name: Visual Studio Code
     category: ide
+    link: https://code.visualstudio.com/
   - name: Unity
     category: ide
-
-  - name: Unit (JUnit, MSTest...)
-    category: test
-  - name: Android Instrumented
-    category: test
-  - name: Appium
-    category: test
-  - name: Cucumber
-    category: test
-  - name: Gauge
-    category: test
-  - name: Selenium
-    category: test
+    link: https://unity.com/fr

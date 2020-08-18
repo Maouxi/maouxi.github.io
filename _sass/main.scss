@@ -15,24 +15,53 @@ body {
     height: 150px;
 }
 
+@media (min-width: 800px) {
+    .home-header {
+        article {
+            flex-flow: row nowrap;
+            align-items: center;
+            min-height: 250px;
+            .home-header-content {
+                align-items: flex-start;
+                margin-left: 20px;
+                .home-header-tags {
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 800px) {
+    .home-header {
+        article {
+            flex-flow: column nowrap;
+            align-items: center;
+            .home-header-content {
+                align-items: center;
+                margin-top: 20px;
+                .home-header-tags {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
 .home-header {
     color: $text-primary-color-invert;
     box-shadow: 0px 1px 1px $shadow;
-    background-image: url("/assets/img/background/header3.png");
+    background-image: url("/assets/img/header.JPG");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
     article {
+        background: linear-gradient(90deg, transparent 0%, #00000045 25%, #00000045 75%, transparent 100%);
         display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-start;
 
         .home-header-content {
             display: flex;
             flex-flow: column nowrap;
-            justify-content: flex-start;
-            margin-left: 20px;
             p {
                 color: $text-primary-light-color-invert;
                 margin-bottom: 15px;
@@ -40,7 +69,28 @@ body {
             .home-header-tags {
                 display: flex;
                 flex-flow: row wrap;
-                justify-content: flex-start;
+            }
+            .home-header-link {
+                flex-flow: row nowrap;
+                margin-top: 18px;
+                a:hover {
+                    background-color: transparent;
+                    svg.linkedin {
+                        fill: $linkedin;
+                    }
+                    svg.github {
+                        fill: $github-invert;
+                    }
+                    svg.azuredevops {
+                        fill: $azuredevops;
+                    }
+                }
+                svg {
+                    fill: $text-primary-light-color-invert;
+                    width: 22px;
+                    height: 22px;
+                    margin-right: 10px;
+                }
             }
         }
     }
@@ -60,25 +110,6 @@ body {
 .tag-small {
     @extend %tag-shared;
     font-size: 12px;
-}
-
-#page-header {
-    display: flex;
-    padding: 60px 30px;
-    color: $text-primary-color-invert;
-    height: 120px;
-    flex-flow: column nowrap;
-    box-shadow: 0px 1px 1px $shadow;
-    justify-content: space-around;
-    align-items: center;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("/assets/img/background/header3.png");
-    h1 {
-        max-width: 800px;
-        margin: auto;
-    }
 }
 
 section,
@@ -103,6 +134,9 @@ a:link {
 a:hover {
     text-decoration: none;
     background-color: $link-hover;
+    h3 {
+        background-color: $link-hover;
+    }
 }
 
 .list-item {
@@ -175,9 +209,21 @@ article {
         h3 {
             display: flex;
             flex-flow: row nowrap;
-            justify-content: space-between;
             font-size: 18px;
             font-weight: normal;
+            svg {
+                width: 15px;
+                height: 15px;
+                margin-left: 5px;
+                fill: $text-shadow-color;
+            }
+        }
+        .lvl {
+            display: flex;
+            display: flex;
+            align-self: center;
+            justify-content: flex-end;
+            flex: 1;
         }
         %lvl-shared {
             @extend %lvl-shared;
@@ -185,6 +231,7 @@ article {
             min-width: 10px;
             min-height: 5px;
             border-radius: 0%;
+            margin-left: 5px;
         }
         .lvl-fill {
             @extend %lvl-shared;
@@ -192,7 +239,7 @@ article {
         }
         .lvl-empty {
             @extend %lvl-shared;
-            background-color: $shadow;
+            background-color: $text-shadow-color;
         }
     }
 }

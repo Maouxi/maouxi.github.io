@@ -1,25 +1,52 @@
-$background-color: #fdfdfd;
-$shadow: #eeeeee;
-$primary-color: orange;
-$link-hover: #e5e5e5;
-$text-primary-color: #121212;
+:root {
+    --background-color: #fdfdfd;
+    --shadow: #eeeeee;
+    --text-shadow-color: #eeeeee;
+    --text-primary-color: #121212;
+    --link-hover: #e5e5e5;
+    --github: #24292e;
+    --github-invert: #ffffff;
+}
+
+body[data-theme="dark"] {
+    --background-color: #333333;
+    --shadow: #444444;
+    --text-shadow-color: #888888;
+    --text-primary-color: #fdfdfd;
+    --link-hover: #555555;
+    --github: #24292e;
+    --github-invert: #ffffff;
+}
+
+$background-color: var(--background-color);
+$shadow: var(--shadow);
+$text-shadow-color: var(--text-shadow-color);
+$link-hover: var(--link-hover);
+$text-primary-color: var(--text-primary-color);
+
+$primary-color: #f4511e;
 $text-primary-color-invert: #fdfdfd;
 $text-primary-light-color: #555555;
 $text-primary-light-color-invert: #fafafa;
 $text-primary-lighter-color: #bbbbbb;
 
+$linkedin: $primary-color;
+$azuredevops: $primary-color;
+$github: $primary-color;
+$github-invert: $primary-color;
+
 .language {
-    background-color: #42a5f5!important;
+    background-color: #42a5f5 !important;
 }
 .framework {
-    background-color: #66bb6a!important;
+    background-color: #66bb6a !important;
 }
 .tools {
-    background-color: #ef5350!important;
+    background-color: #ef5350 !important;
 }
 .architecture {
-    background-color: #7e57c2!important;
+    background-color: #7e57c2 !important;
 }
 .test {
-    background-color: #90a4ae!important;
+    background-color: #f542ae !important;
 }

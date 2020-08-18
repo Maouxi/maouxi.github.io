@@ -3,7 +3,7 @@ title: Home
 ---
 <div class="home-header">
     <article class="content">
-        <img src="/assets/img/home/profil.jfif" class="avatar" />
+        <img src="/assets/img/profil.jfif" class="avatar" />
         <div class="home-header-content">
             <h1>Maxence Raoux - <span id="myage">-</span> ans</h1>
             <p>Ingénieur informatique - Développeur Android / .Net</p>
@@ -11,6 +11,16 @@ title: Home
                 {% assign favorite_skills = site.data.skills.skills | where: "fav", "true" %}
                 {% for skill in favorite_skills %}
                 <span class="tag-small {{ skill.category }}">{{ skill.name }}</span>
+                {% endfor %}
+            </div>
+            <div class="home-header-link">
+                {% for item in site.data.social-link %}
+                <a href="{{ item.link }}" target="_blank">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="{{item.class}}">
+                        <title>{{ item.name}}</title>
+                        {{ item.svg }}
+                    </svg>
+                </a>
                 {% endfor %}
             </div>
         </div>
@@ -25,20 +35,27 @@ title: Home
         {% assign sorted_skills = skill_group.items | sort: "stars" | reverse %}
         <h2>{{ category.first.label }}</h2>
         {% for skill in sorted_skills %}
-        <h3>
-            {{ skill.name }}
-            {% if skill.stars > 0 %}
-            <span>
-                {% for i in (skill.stars..4) %}
-                <span class="lvl-empty"></span>
-                {% endfor %}
-                {% for i in (1..skill.stars) %}
-                <span class="lvl-fill {{ skill_group.name }}"></span>
-                {% endfor %}
-
-            </span>
-            {% endif %}
-        </h3>
+        {% if skill.link %} <a href="{{ skill.link }}" target="_blank"> {% endif %}
+            <h3>
+                {{ skill.name }}
+                {% if skill.link %}
+                <svg viewBox="0 0 22 22">
+                    <path
+                        d="M3.9,12c0,-1.71 1.39,-3.1 3.1,-3.1h4L11,7L7,7c-2.76,0 -5,2.24 -5,5s2.24,5 5,5h4v-1.9L7,15.1c-1.71,0 -3.1,-1.39 -3.1,-3.1zM8,13h8v-2L8,11v2zM17,7h-4v1.9h4c1.71,0 3.1,1.39 3.1,3.1s-1.39,3.1 -3.1,3.1h-4L13,17h4c2.76,0 5,-2.24 5,-5s-2.24,-5 -5,-5z" />
+                </svg>
+                {% endif %}
+                {% if skill.stars > 0 %}
+                <span class="lvl">
+                    {% for i in (skill.stars..4) %}
+                    <span class="lvl-empty"></span>
+                    {% endfor %}
+                    {% for i in (1..skill.stars) %}
+                    <span class="lvl-fill {{ skill_group.name }}"></span>
+                    {% endfor %}
+                </span>
+                {% endif %}
+            </h3>
+            {% if skill.link %} </a> {% endif %}
         {% endfor %}
     </div>
     {% endfor %}

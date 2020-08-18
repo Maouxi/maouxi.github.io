@@ -2,7 +2,12 @@
 
     <div id="social">
         {% for item in site.data.social-link %}
-        <a href="{{ item.link }}" target="_blank"><img src="{{ item.icon }}" alt="{{ item.name }}" /></a>
+        <a href="{{ item.link }}" target="_blank">
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="{{item.class}}">
+                <title>{{ item.name}}</title>
+                {{ item.svg }}
+            </svg>
+        </a>
         {% endfor %}
     </div>
 

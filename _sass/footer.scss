@@ -11,14 +11,21 @@ footer {
         margin-bottom: 20px;
         a:hover {
             background-color: transparent;
-            img {
-                opacity: 100%;
+            svg.linkedin {
+                fill: $linkedin;
+            }
+            svg.github {
+                fill: $github;
+            }
+            svg.azuredevops {
+                fill: $azuredevops;
             }
         }
-        img {
-            opacity: 30%;
+        svg {
+            fill: $text-primary-lighter-color;
             width: 22px;
             height: 22px;
+            margin-right: 10px;
         }
     }
 
