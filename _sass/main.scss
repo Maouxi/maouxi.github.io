@@ -9,11 +9,23 @@ body {
     color: $text-primary-color;
 }
 
+@media (min-width: 800px) {
+    section,
+    article {
+        padding: $page-margin;
+    }
+}
+@media (max-width: 800px) {
+    section,
+    article {
+        padding: $page-margin-small;
+    }
+}
+
 section,
 article {
     max-width: 1000px;
     margin: auto;
-    padding: 30px;
 }
 
 table {

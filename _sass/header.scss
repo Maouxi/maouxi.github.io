@@ -1,3 +1,19 @@
+@media (min-width: 800px) {
+    header#navigation {
+        h1 {
+            padding: $page-margin;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    header#navigation {
+        h1 {
+            padding: $page-margin-small;
+        }
+    }
+}
+
 header#navigation {
     display: flex;
     background-color: $background-color;
@@ -7,7 +23,6 @@ header#navigation {
     align-items: center;
     box-shadow: 0px 1px 1px $shadow;
     h1 {
-        padding: 30px;
         font-size: 30px;
         flex: 1;
         margin-bottom: 0px;
