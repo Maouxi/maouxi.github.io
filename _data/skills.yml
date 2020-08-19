@@ -2,149 +2,195 @@
   category: framework
   fav: true
   stars: 5
+  display: true
   link: https://www.android.com/
 - name: Android Jetpack
   category: framework
   stars: 5
+  display: true
   link: https://developer.android.com/jetpack/
 - name: .Net
   category: framework
   fav: true
   stars: 4
+  display: true
   link: https://dotnet.microsoft.com/
 - name: ASP.Net
   category: framework
   fav: true
   stars: 4
+  display: true
   link: https://dotnet.microsoft.com/apps/aspnet
 - name: UWP
   category: framework
   stars: 4
+  display: true
   link: https://docs.microsoft.com/en-Us/windows/uwp/
 - name: Azure
   category: framework
   fav: true
   stars: 3
+  display: true
   link: https://azure.microsoft.com/
 - name: Flutter
   category: framework
   stars: 1
+  display: true
   link: https://flutter.dev/
 - name: Angular
   category: framework
   stars: 3
+  display: true
   link: https://angular.io/
 - name: Xamarin
   category: framework
   stars: 2
+  display: true
   link: https://dotnet.microsoft.com/apps/xamarin
+- name: Jekyll
+  category: framework
+  stars: 3
+  display: true
+  link: https://jekyllrb.com/
 
 - name: Kotlin
   category: language
   fav: true
   stars: 5
+  display: true
   link: https://kotlinlang.org/
 - name: Java
   category: language
   stars: 5
+  display: true
 - name: C#
   category: language
   fav: true
+  display: true
   stars: 5
 - name: TypeScript
   category: language
   stars: 2
+  display: true
   link: https://www.typescriptlang.org/
 - name: JavaScript
   category: language
   stars: 2
+  display: true
 - name: Dart
   category: language
   stars: 1
+  display: true
 - name: HTML - CSS
   category: language
   stars: 3
+  display: true
 - name: PHP
   category: language
   stars: 2
+  display: true
 - name: Python
   category: language
   stars: 2
+  display: true
 - name: SQL
   category: language
   stars: 4
+  display: true
 
 - name: Git
   category: tools
   fav: true
   stars: 4
+  display: true
   link: https://git-scm.com/
 - name: SVN
   category: tools
   stars: 3
+  display: true
 - name: Azure Devops
   category: tools
   fav: true
   stars: 5
+  display: true
   link: https://azure.microsoft.com/en-us/services/devops/
 - name: Firebase
   category: tools
   stars: 3
+  display: true
   link: https://firebase.google.com/
 - name: Jenkins
   category: tools
   stars: 3
+  display: true
 - name: Jira
   category: tools
   stars: 3
+  display: true
 - name: Node-Red
   category: tools
   stars: 3
+  display: true
 
 - name: Unit (JUnit, MSTest...)
   category: test
   stars: 5
+  display: true
 - name: Android Instrumented
   category: test
   stars: 4
+  display: true
 - name: Appium
   category: test
   stars: 3
+  display: true
   link: https://appium.io/
 - name: Cucumber
   category: test
   stars: 3
+  display: true
   link: https://cucumber.io/
 - name: Gauge
   category: test
   stars: 3
+  display: true
   link: https://gauge.org/index.html
 - name: Selenium
   category: test
   stars: 3
+  display: true
 - name: Sonar
   category: test
   stars: 3
+  display: true
 - name: Jacoco
   category: test
   stars: 3
+  display: true
 
 - name: MVVM
   category: architecture
+  display: true
 - name: MVC
   category: architecture
+  display: true
 - name: Dependency Injection
   category: architecture
+  display: true
 
 - name: Android studio
   category: ide
+  display: true
   link: https://developer.android.com/studio/
 - name: Visual Studio
   category: ide
+  display: true
   lin: https://visualstudio.microsoft.com/fr/
 - name: Visual Studio Code
   category: ide
+  display: true
   link: https://code.visualstudio.com/
 - name: Unity
   category: ide
+  display: true
   link: https://unity.com/fr

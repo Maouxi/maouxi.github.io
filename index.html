@@ -28,7 +28,7 @@ title: Home
     </article>
 </div>
 <article class="content skill-container">
-    {% assign grouped_skills = site.data.skills | group_by: "category" %}
+    {% assign grouped_skills = site.data.skills | where: "display", true | group_by: "category" %}
 
     {% for skill_group in grouped_skills %}
     <div class='skill-item'>

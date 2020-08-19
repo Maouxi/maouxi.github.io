@@ -1,6 +1,6 @@
 ---
 title: IsMyServerOnline
-date: 12/04/1990
+date: 19/08/2020
 img_url: /assets/img/projects/ismyserveronline/
 icon: android
 skills: [Android, Kotlin, Azure Devops, Git]

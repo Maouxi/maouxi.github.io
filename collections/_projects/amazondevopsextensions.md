@@ -1,6 +1,6 @@
 ---
 title: Amazon AppStore Extensions for Azure Devops
-date: 12/04/1990
+date: 19/08/2020
 img_url: /assets/img/projects/ismyserveronline/
 icon: azuredevops
 skills: [TypeScript, Azure Devops, Git]
