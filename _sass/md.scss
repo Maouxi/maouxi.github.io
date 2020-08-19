@@ -100,4 +100,18 @@ b {
 
 td {
     text-align: center;
+    vertical-align: middle;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    fill: $text-primary-color;
+    &.big {
+        width: 40px;
+        height: 40px;
+    }
+    &.primary {
+        fill: $primary-color;
+    }
 }
