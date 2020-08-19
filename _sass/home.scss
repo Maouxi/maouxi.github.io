@@ -1,0 +1,164 @@
+.avatar {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+@media (min-width: 800px) {
+    .home-header {
+        article {
+            flex-flow: row nowrap;
+            align-items: center;
+            min-height: 250px;
+            .home-header-content {
+                align-items: flex-start;
+                margin-left: 20px;
+                .home-header-tags {
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 800px) {
+    .home-header {
+        article {
+            flex-flow: column nowrap;
+            align-items: center;
+            .home-header-content {
+                align-items: center;
+                margin-top: 20px;
+                .home-header-tags {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+.home-header {
+    color: $text-primary-color-invert;
+    box-shadow: 0px 1px 1px $shadow;
+    background-image: url("/assets/img/header.JPG");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    article {
+        background: linear-gradient(90deg, transparent 0%, #00000045 25%, #00000045 75%, transparent 100%);
+        display: flex;
+
+        .home-header-content {
+            display: flex;
+            flex-flow: column nowrap;
+            p {
+                color: $text-primary-light-color-invert;
+                margin-bottom: 15px;
+            }
+            .home-header-tags {
+                display: flex;
+                flex-flow: row wrap;
+            }
+            .home-header-link {
+                flex-flow: row nowrap;
+                margin-top: 18px;
+                a:hover {
+                    background-color: transparent;
+                    svg.linkedin {
+                        fill: $linkedin;
+                    }
+                    svg.github {
+                        fill: $github-invert;
+                    }
+                    svg.azuredevops {
+                        fill: $azuredevops;
+                    }
+                }
+                svg {
+                    fill: $text-primary-light-color-invert;
+                    width: 22px;
+                    height: 22px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 800px) {
+    .skill-container {
+        display: flex;
+        width: 100%;
+        flex-flow: row wrap;
+
+        .skill-item {
+            width: 50%;
+            h3 {
+                margin-right: 30px;
+                padding: 5px 10px;
+            }
+        }
+    }
+}
+@media (max-width: 800px) {
+    .skill-container {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .skill-item {
+        h3 {
+            margin-right: 0px;
+            padding: 5px 10px;
+        }
+    }
+}
+
+.skill-container {
+    .skill-item {
+        margin-bottom: 15px;
+        a:hover {
+            h3 {
+                background-color: $link-hover;
+            }
+        }
+        h2 {
+            margin-bottom: 5px;
+        }
+        h3 {
+            display: flex;
+            flex-flow: row nowrap;
+            font-size: 16px;
+            font-weight: normal;
+            svg {
+                width: 15px;
+                height: 15px;
+                margin-left: 5px;
+                fill: $text-shadow-color;
+            }
+        }
+        .lvl {
+            display: flex;
+            align-self: center;
+            justify-content: flex-end;
+            flex: 1;
+        }
+        .lvl-fill {
+            @extend %lvl-shared;
+            background-color: $primary-color;
+        }
+        .lvl-empty {
+            @extend %lvl-shared;
+            background-color: $text-shadow-color;
+        }
+    }
+}
+
+%lvl-shared {
+    @extend %lvl-shared;
+    display: inline-block;
+    min-width: 10px;
+    min-height: 5px;
+    border-radius: 0%;
+    margin-left: 5px;
+}

@@ -1,0 +1,103 @@
+div.highlight {
+    background-color: $code-background-color;
+    padding: 7px 7px 7px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    code {
+        background-color: transparent;
+    }
+}
+
+h2,
+h3,
+h4,
+h4,
+h6,
+table,
+p {
+    margin: 10px 0px;
+}
+
+header {
+    h1 {
+        margin-bottom: 0px;
+    }
+    p {
+        color: $text-primary-lighter-color;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+}
+
+a {
+    color: $primary-color;
+}
+a:hover {
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+img {
+    max-width: 100%;
+}
+
+code {
+    background-color: $code-background-color;
+    color: $text-primary-color;
+    padding: 2px;
+    font-size: 15px;
+    border-radius: 5px;
+    font-family: "Bitstream Vera Sans Mono", "Courier", monospace;
+}
+
+ul,
+ol {
+    margin: 10px 0;
+    padding-left: 30px;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+ul.task-list {
+    list-style-type: none;
+    padding-left: 15px;
+}
+
+ol ul,
+ul ol,
+ul ul,
+ol ol {
+    margin: 0;
+}
+
+ul ul,
+ol ul {
+    list-style-type: circle;
+}
+
+input.task-list-item-checkbox {
+    margin-right: 5px;
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+strong,
+b {
+    font-weight: bold;
+}
+
+td {
+    text-align: center;
+}

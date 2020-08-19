@@ -2,9 +2,17 @@
 
     <div id="social">
         {% for item in site.data.social-link %}
-        <a href="{{ item.link }}" target="_blank"><img src="{{ item.icon }}" alt="{{ item.name }}" /></a>
+        <a href="{{ item.link }}" target="_blank">
+            {% assign icon = site.data.icons | where_exp: "i", "i.tag == item.icon" | first %}
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="{{icon.tag}}">
+                <title>{{ icon.name}}</title>
+                {{ icon.svg }}
+            </svg>
+        </a>
         {% endfor %}
     </div>
 
-    <p id="copyright">Maxence Raoux | 2020</p>
+    <p class="copyright">The contents of this website are under the terms of the <a
+            href="https://github.com/Maouxi/maouxi.github.io/blob/master/LICENSE" target="_blank">MIT License.</a></p>
+    <p class="copyright">Maxence Raoux | © 2020</p>
 </footer>

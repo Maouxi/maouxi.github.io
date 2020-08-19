@@ -1,0 +1,12 @@
+- name: framework
+  label: Framework
+- name: language
+  label: Language
+- name: ide
+  label: IDE
+- name: tools
+  label: Tools
+- name: architecture
+  label: Architecture
+- name: test
+  label: Testing
