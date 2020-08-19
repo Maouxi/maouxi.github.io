@@ -125,6 +125,9 @@
 - name: Sonar
   category: test
   stars: 3
+- name: Jacoco
+  category: test
+  stars: 3
 
 - name: MVVM
   category: architecture

@@ -26,9 +26,3 @@ __Get it!__
 - Notification on server status change or when updated
 - Light and Dark theme.
 
-## Challenges
-
-Comming soon
-
-
-

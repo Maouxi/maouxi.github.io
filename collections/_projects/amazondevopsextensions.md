@@ -3,17 +3,22 @@ title: Amazon AppStore Extensions for Azure Devops
 date: 12/04/1990
 img_url: /assets/img/projects/ismyserveronline/
 icon: azuredevops
-skills: [JavaScript, Azure Devops, Git]
+skills: [TypeScript, Azure Devops, Git]
 ---
 
 Tasks for Amazon AppStore submission api and make continuous delivery on Azure DevOps Services pipeline build or release.
 
+[https://marketplace.visualstudio.com/publishers/MaxenceRaoux]()
+
 ## Tasks
 
-- PrepareTask: Authentication to the api and create or get the current update
-- EditTask: Edit an update description
-- ReplaceApkTask: Replace an apk into the current update
-- CommitTask: Commit the update to the Amazon AppStore
+- __PrepareTask__: Authentication to the api and create or get the current update
+- __EditTask__: Edit an update description
+- __ReplaceApkTask__: Replace an apk into the current update
+- __CommitTask__: Commit the update to the Amazon AppStore
 
-## 
+## Devops
 
+Projet source code and wiki are hosted on GitHub: [amazon-store-api-azure-devops-pipeline-extensions](https://github.com/Maouxi/amazon-store-api-azure-devops-pipeline-extensions) 
+
+Project boards and pipeline are hosted on Azure Devops: [AmazonDevOpsExtensions](https://dev.azure.com/maxenceraoux/AmazonDevOpsExtensions)
