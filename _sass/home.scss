@@ -88,13 +88,11 @@
 @media (min-width: 800px) {
     .skill-container {
         display: flex;
-        width: 100%;
         flex-flow: row wrap;
-
+        justify-content: space-between;
         .skill-item {
-            width: 50%;
+            width: 45%;
             h3 {
-                margin-right: 30px;
                 padding: 5px 10px;
             }
         }
@@ -108,7 +106,6 @@
 
     .skill-item {
         h3 {
-            margin-right: 0px;
             padding: 5px 10px;
         }
     }
