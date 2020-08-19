@@ -11,9 +11,13 @@ body {
 
 section,
 article {
-    max-width: 800px;
+    max-width: 1000px;
     margin: auto;
     padding: 30px;
+}
+
+table {
+    width: 100%;
 }
 
 h1 {
@@ -50,11 +54,12 @@ a:hover {
 }
 
 .list-item {
+    margin-bottom: 30px;
     h2 {
+        margin-bottom: 5px;
         a {
             font-size: 26px;
             color: $primary-color;
-            margin-bottom: 15px;
             text-decoration: none;
         }
         a:link {
@@ -64,6 +69,17 @@ a:hover {
             text-decoration: underline;
             background-color: transparent;
         }
+        svg {
+            fill: $text-primary-light-color;
+            height: 20px;
+            width: 20px;
+        }
     }
-    margin-bottom: 20px;
+    p {
+        margin-left: 26px;
+        margin-bottom: 10px;
+    }
+    .skills {
+        margin-left: 25px;
+    }
 }

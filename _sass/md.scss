@@ -15,6 +15,7 @@ h3,
 h4,
 h4,
 h6,
+table,
 p {
     margin: 10px 0px;
 }
@@ -95,4 +96,8 @@ i {
 strong,
 b {
     font-weight: bold;
+}
+
+td {
+    text-align: center;
 }

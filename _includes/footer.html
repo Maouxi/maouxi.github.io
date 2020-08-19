@@ -3,9 +3,10 @@
     <div id="social">
         {% for item in site.data.social-link %}
         <a href="{{ item.link }}" target="_blank">
-            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="{{item.class}}">
-                <title>{{ item.name}}</title>
-                {{ item.svg }}
+            {% assign icon = site.data.icons | where_exp: "i", "i.tag == item.icon" | first %}
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="{{icon.tag}}">
+                <title>{{ icon.name}}</title>
+                {{ icon.svg }}
             </svg>
         </a>
         {% endfor %}

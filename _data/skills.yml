@@ -1,158 +1,147 @@
-categories:
-  - name: framework
-    label: Framework
-  - name: language
-    label: Language
-  - name: ide
-    label: IDE
-  - name: tools
-    label: Tools
-  - name: architecture
-    label: Architecture
-  - name: test
-    label: Testing
-skills:
-  - name: Android
-    category: framework
-    fav: true
-    stars: 5
-    link: https://www.android.com/
-  - name: Android Jetpack
-    category: framework
-    stars: 5
-    link: https://developer.android.com/jetpack/
-  - name: .Net
-    category: framework
-    fav: true
-    stars: 4
-    link: https://dotnet.microsoft.com/
-  - name: ASP.Net
-    category: framework
-    fav: true
-    stars: 4
-    link: https://dotnet.microsoft.com/apps/aspnet
-  - name: UWP
-    category: framework
-    stars: 4
-    link: https://docs.microsoft.com/en-Us/windows/uwp/
-  - name: Azure
-    category: framework
-    fav: true
-    stars: 3
-    link: https://azure.microsoft.com/
-  - name: Flutter
-    category: framework
-    stars: 1
-    link: https://flutter.dev/
-  - name: Angular
-    category: framework
-    stars: 3
-    link: https://angular.io/
-  - name: Xamarin
-    category: framework
-    stars: 2
-    link: https://dotnet.microsoft.com/apps/xamarin
+- name: Android
+  category: framework
+  fav: true
+  stars: 5
+  link: https://www.android.com/
+- name: Android Jetpack
+  category: framework
+  stars: 5
+  link: https://developer.android.com/jetpack/
+- name: .Net
+  category: framework
+  fav: true
+  stars: 4
+  link: https://dotnet.microsoft.com/
+- name: ASP.Net
+  category: framework
+  fav: true
+  stars: 4
+  link: https://dotnet.microsoft.com/apps/aspnet
+- name: UWP
+  category: framework
+  stars: 4
+  link: https://docs.microsoft.com/en-Us/windows/uwp/
+- name: Azure
+  category: framework
+  fav: true
+  stars: 3
+  link: https://azure.microsoft.com/
+- name: Flutter
+  category: framework
+  stars: 1
+  link: https://flutter.dev/
+- name: Angular
+  category: framework
+  stars: 3
+  link: https://angular.io/
+- name: Xamarin
+  category: framework
+  stars: 2
+  link: https://dotnet.microsoft.com/apps/xamarin
 
-  - name: Kotlin
-    category: language
-    fav: true
-    stars: 5
-    link: https://kotlinlang.org/
-  - name: Java
-    category: language
-    stars: 5
-  - name: C#
-    category: language
-    fav: true
-    stars: 5
-  - name: JavaScript - TypeScript
-    category: language
-    stars: 3
-    link: https://www.typescriptlang.org/
-  - name: Dart
-    category: language
-    stars: 1
-  - name: HTML - CSS
-    category: language
-    stars: 3
-  - name: PHP
-    category: language
-    stars: 2
-  - name: Python
-    category: language
-    stars: 2
-  - name: SQL
-    category: language
-    stars: 4
+- name: Kotlin
+  category: language
+  fav: true
+  stars: 5
+  link: https://kotlinlang.org/
+- name: Java
+  category: language
+  stars: 5
+- name: C#
+  category: language
+  fav: true
+  stars: 5
+- name: TypeScript
+  category: language
+  stars: 2
+  link: https://www.typescriptlang.org/
+- name: JavaScript
+  category: language
+  stars: 2
+- name: Dart
+  category: language
+  stars: 1
+- name: HTML - CSS
+  category: language
+  stars: 3
+- name: PHP
+  category: language
+  stars: 2
+- name: Python
+  category: language
+  stars: 2
+- name: SQL
+  category: language
+  stars: 4
 
-  - name: Git
-    category: tools
-    fav: true
-    stars: 4
-    link: https://git-scm.com/
-  - name: SVN
-    category: tools
-    stars: 3
-  - name: Azure Devops
-    category: tools
-    fav: true
-    stars: 5
-    link: https://azure.microsoft.com/en-us/services/devops/
-  - name: Firebase
-    category: tools
-    stars: 3
-    link: https://firebase.google.com/
-  - name: Jenkins
-    category: tools
-    stars: 3
-  - name: Jira
-    category: tools
-    stars: 3
-  - name: Node-Red
-    category: tools
-    stars: 3
+- name: Git
+  category: tools
+  fav: true
+  stars: 4
+  link: https://git-scm.com/
+- name: SVN
+  category: tools
+  stars: 3
+- name: Azure Devops
+  category: tools
+  fav: true
+  stars: 5
+  link: https://azure.microsoft.com/en-us/services/devops/
+- name: Firebase
+  category: tools
+  stars: 3
+  link: https://firebase.google.com/
+- name: Jenkins
+  category: tools
+  stars: 3
+- name: Jira
+  category: tools
+  stars: 3
+- name: Node-Red
+  category: tools
+  stars: 3
 
-  - name: Unit (JUnit, MSTest...)
-    category: test
-    stars: 5
-  - name: Android Instrumented
-    category: test
-    stars: 4
-  - name: Appium
-    category: test
-    stars: 3
-    link: https://appium.io/
-  - name: Cucumber
-    category: test
-    stars: 3
-    link: https://cucumber.io/
-  - name: Gauge
-    category: test
-    stars: 3
-    link: https://gauge.org/index.html
-  - name: Selenium
-    category: test
-    stars: 3
-  - name: Sonar
-    category: test
-    stars: 3
+- name: Unit (JUnit, MSTest...)
+  category: test
+  stars: 5
+- name: Android Instrumented
+  category: test
+  stars: 4
+- name: Appium
+  category: test
+  stars: 3
+  link: https://appium.io/
+- name: Cucumber
+  category: test
+  stars: 3
+  link: https://cucumber.io/
+- name: Gauge
+  category: test
+  stars: 3
+  link: https://gauge.org/index.html
+- name: Selenium
+  category: test
+  stars: 3
+- name: Sonar
+  category: test
+  stars: 3
 
-  - name: MVVM
-    category: architecture
-  - name: MVC
-    category: architecture
-  - name: Dependency Injection
-    category: architecture
+- name: MVVM
+  category: architecture
+- name: MVC
+  category: architecture
+- name: Dependency Injection
+  category: architecture
 
-  - name: Android studio
-    category: ide
-    link: https://developer.android.com/studio/
-  - name: Visual Studio
-    category: ide
-    lin: https://visualstudio.microsoft.com/fr/
-  - name: Visual Studio Code
-    category: ide
-    link: https://code.visualstudio.com/
-  - name: Unity
-    category: ide
-    link: https://unity.com/fr
+- name: Android studio
+  category: ide
+  link: https://developer.android.com/studio/
+- name: Visual Studio
+  category: ide
+  lin: https://visualstudio.microsoft.com/fr/
+- name: Visual Studio Code
+  category: ide
+  link: https://code.visualstudio.com/
+- name: Unity
+  category: ide
+  link: https://unity.com/fr

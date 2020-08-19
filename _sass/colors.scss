@@ -8,6 +8,7 @@
     --github-invert: #ffffff;
     --code-background-color: rgba(27, 31, 35, 0.05);
     --code-border-color: rgba(27, 31, 35, 0.3);
+    --text-primary-light-color: #555555;
 }
 
 body[data-theme="dark"] {
@@ -20,6 +21,7 @@ body[data-theme="dark"] {
     --github-invert: #ffffff;
     --code-background-color: rgba(190, 197, 204, 0.1);
     --code-border-color: rgba(190, 197, 204, 0.4);
+    --text-primary-light-color: #cccccc;
 }
 
 $background-color: var(--background-color);
@@ -30,7 +32,7 @@ $text-primary-color: var(--text-primary-color);
 
 $primary-color: #f4511e;
 $text-primary-color-invert: #fdfdfd;
-$text-primary-light-color: #555555;
+$text-primary-light-color: var(--text-primary-light-color);
 $text-primary-light-color-invert: #fafafa;
 $text-primary-lighter-color: #bbbbbb;
 
@@ -44,16 +46,31 @@ $github-invert: $primary-color;
 
 .language {
     background-color: #42a5f5 !important;
+    &.light {
+        background-color: #42a5f5aa !important;
+    }
 }
 .framework {
     background-color: #66bb6a !important;
+    &.light {
+        background-color: #66bb6aaa !important;
+    }
 }
 .tools {
     background-color: #ef5350 !important;
+    &.light {
+        background-color: #ef5350aa !important;
+    }
 }
 .architecture {
     background-color: #7e57c2 !important;
+    &.light {
+        background-color: #7e57c2aa !important;
+    }
 }
 .test {
     background-color: #f542ae !important;
+    &.light {
+        background-color: #f542aeaa !important;
+    }
 }

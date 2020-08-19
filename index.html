@@ -8,7 +8,7 @@ title: Home
             <h1>Maxence Raoux - <span id="myage">-</span> ans</h1>
             <p>Ingénieur informatique - Développeur Android / .Net</p>
             <div class="home-header-tags">
-                {% assign favorite_skills = site.data.skills.skills | where: "fav", "true" %}
+                {% assign favorite_skills = site.data.skills | where: "fav", "true" %}
                 {% for skill in favorite_skills %}
                 <span class="tag-small {{ skill.category }}">{{ skill.name }}</span>
                 {% endfor %}
@@ -16,9 +16,10 @@ title: Home
             <div class="home-header-link">
                 {% for item in site.data.social-link %}
                 <a href="{{ item.link }}" target="_blank">
-                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="{{item.class}}">
-                        <title>{{ item.name}}</title>
-                        {{ item.svg }}
+                    {% assign icon = site.data.icons | where_exp: "i", "i.tag == item.icon" | first %}
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="{{icon.tag}}">
+                        <title>{{icon.name}}</title>
+                        {{ icon.svg }}
                     </svg>
                 </a>
                 {% endfor %}
@@ -27,11 +28,11 @@ title: Home
     </article>
 </div>
 <article class="content skill-container">
-    {% assign grouped_skills = site.data.skills.skills | group_by: "category" %}
+    {% assign grouped_skills = site.data.skills | group_by: "category" %}
 
     {% for skill_group in grouped_skills %}
     <div class='skill-item'>
-        {% assign category = site.data.skills.categories | where: "name", skill_group.name %}
+        {% assign category = site.data.skill-categories | where: "name", skill_group.name %}
         {% assign sorted_skills = skill_group.items | sort: "stars" | reverse %}
         <h2>{{ category.first.label }}</h2>
         {% for skill in sorted_skills %}

@@ -1,74 +1,17 @@
 ---
 title: IsMyServerOnline
 date: 12/04/1990
+img_url: /assets/img/projects/ismyserveronline/
+icon: android
+skills: [Android, Kotlin, Azure Devops, Git]
 ---
 Monitor yout servers status within an Android application.
 
-## Md test
+| ![IsMyServerOnline - Home]({{page.img_url}}screenshot1.png) | ![IsMyServerOnline - Notifications]({{page.img_url}}screenshot2.png) | ![IsMyServerOnline - Server details]({{page.img_url}}screenshot3.png) | ![IsMyServerOnline - Settings]({{page.img_url}}screenshot4.png) | ![IsMyServerOnline - Server configuration]({{page.img_url}}screenshot5.png)
 
-### subtitle
+__Get it!__
 
-It'm a paragraphe so
-i'm not in multiple line
-
-but me i'm 
-
-Lien  : [texte du lien](url_du_lien "texte pour le titre, facultatif")
-
-There is a lot of things to say
-
-**i'm a strong text** and __me too__
-
-_i'm a italic text_ and *me too*
-
-i'm underline
-
-Je suis un petit bout de `code` je pense
-
-```html
-<html>
-<body>
-    <h1>12</h1>
-</body>
-</html>
-```
-
-Liste1: 
-* item 1
-* item 2
-    * item 2.1
-    * item 2.2
-* item 3
-
-List2
-1. mon premier
-2. mon deuxième
-
-List3
-- [ ]  Case non cochée
-- [x]  Case cochée
-
-Image:
-![Texte alternatif](/assets/img/header.JPG "texte pour le titre, facultatif")
-
-#### subsubtitle
-
-something
-
-something
-
-#### subsubtitle
-
-something
-
-something
-
-### subtitle
-
-something
-
-something
-
+| [Download it on Google Play](https://play.google.com/store/apps/details?id=com.maoux.ismyserveronline) | [Download it on Amazon AppStore](https://www.amazon.fr/My-Server-Online-Monitorez-serveurs/dp/B088193K9W/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=ismyserveronline&qid=1597831390&s=mobile-apps&sr=1-1) |
 
 ## Features
 
@@ -83,10 +26,9 @@ something
 - Notification on server status change or when updated
 - Light and Dark theme.
 
-## Technos
+## Challenges
 
-- Kotlin
-- Azure Devops
+Comming soon
 
 
 
