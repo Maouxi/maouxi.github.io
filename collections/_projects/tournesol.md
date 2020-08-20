@@ -21,8 +21,7 @@ Why I choose tournesol name? I'm sur you don't care 😈
 Build in angular, generated with Angular CLI. Hosted in Microsoft Azure.
 
 | ![Tournesol Web - Home]({{page.img_url}}web-screenshot1.png){:style="width:600px;"} |
-
-[Access the Tournesol web app.](https://tournesol-webapp.azurewebsites.net/){:target="_blank"}
+| [Access the Tournesol web app.](https://tournesol-webapp.azurewebsites.net/){:target="_blank"} |
 
 ### Android
 
