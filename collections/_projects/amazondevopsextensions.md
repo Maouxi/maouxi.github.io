@@ -2,8 +2,8 @@
 title: Amazon AppStore Extensions for Azure Devops
 date: 19/08/2020
 img_url: /assets/img/projects/ismyserveronline/
-icon: azuredevops
-skills: [TypeScript, Azure Devops, Git]
+icons: [azuredevops]
+skills: [TypeScript, Azure Devops, GiHub]
 ---
 
 Tasks for Amazon AppStore submission api and make continuous delivery on Azure DevOps Services pipeline build or release.

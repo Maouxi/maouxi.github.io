@@ -6,11 +6,11 @@ title: Home
         <img src="/assets/img/profil.jfif" class="avatar" />
         <div class="home-header-content">
             <h1>Maxence Raoux - <span id="myage">-</span> ans</h1>
-            <p>Developer Android | .Net</p>
+            <p>Android & .Net developer </p>
             <div class="home-header-tags">
                 {% assign favorite_skills = site.data.skills | where: "fav", "true" %}
                 {% for skill in favorite_skills %}
-                <span class="tag-small {{ skill.category }}">{{ skill.name }}</span>
+                <span class="tag {{ skill.category }}">{{ skill.name }}</span>
                 {% endfor %}
             </div>
             <div class="home-header-link">

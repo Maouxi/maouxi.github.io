@@ -2,7 +2,7 @@
 title: IsMyServerOnline
 date: 19/08/2020
 img_url: /assets/img/projects/ismyserveronline/
-icon: android
+icons: [android]
 skills: [Android, Kotlin, Azure Devops, Git]
 ---
 Monitor yout servers status within an Android application.

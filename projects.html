@@ -4,9 +4,15 @@ title: My projects
 <section>
   {% for project in site.projects %}
   <div class="content list-item">
-    {% assign icon = site.data.icons | where_exp: "i", "i.tag == project.icon" | first %}
-    <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 25 25">
-      {{ icon.svg }} </svg>
+    <div class="list-item-icons">
+      {% for iconname in project.icons %}
+      {% assign icon = site.data.icons | where_exp: "i", "i.tag == iconname" | first %}
+      <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 25 25">
+        <title>{{icon.name}}</title>
+        {{ icon.svg }}
+      </svg>
+      {% endfor %}
+    </div>
     <div class="list-item-content">
       <h2> <a href="{{ project.url }}"> {{ project.title }}</a> </h2>
       {{ project.excerpt }}
