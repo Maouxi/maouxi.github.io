@@ -7,6 +7,7 @@ skills: [Android, Angular, .Net, Azure, Kotlin, TypeScript, RxJava, Azure Devops
 ---
 
 The tournesol application allow people to define who brings what to an event.
+
 Why I choose tournesol name? I'm sur you don't care 😈
 
 ## Project organisation

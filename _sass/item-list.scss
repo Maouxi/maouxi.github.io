@@ -7,6 +7,10 @@
         display: flex;
         flex-flow: column nowrap;
         margin-left: 15px;
+        .skills {            
+            display: flex;
+            flex-flow: row wrap;
+        }
     }
     .list-item-icons {
         display: flex;

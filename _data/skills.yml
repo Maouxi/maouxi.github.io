@@ -110,7 +110,7 @@
   link: https://git-scm.com/
 - name: SVN
   category: tools
-  stars: 3
+  stars: 3  
   display: true
 - name: Azure Devops
   category: tools
