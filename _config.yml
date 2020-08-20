@@ -1,4 +1,4 @@
-baseurl: "" 
+baseurl: ""
 
 permalink: /blog/:year/:month/:title.html
 
@@ -9,20 +9,19 @@ collections:
     output: true
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
       layout: "default"
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
-  -
-    scope:
+  - scope:
       path: ""
       type: "projects"
     values:
       layout: "project"
+
+google_analytics: UA-175915561-1
