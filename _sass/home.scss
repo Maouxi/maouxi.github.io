@@ -64,14 +64,8 @@
                 margin-top: 18px;
                 a:hover {
                     background-color: transparent;
-                    svg.linkedin {
-                        fill: $linkedin;
-                    }
-                    svg.github {
-                        fill: $github-invert;
-                    }
-                    svg.azuredevops {
-                        fill: $azuredevops;
+                    svg {
+                        fill: $primary-color;
                     }
                 }
                 svg {

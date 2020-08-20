@@ -4,8 +4,6 @@
     --text-shadow-color: #eeeeee;
     --text-primary-color: #121212;
     --link-hover: #e5e5e5;
-    --github: #24292e;
-    --github-invert: #ffffff;
     --code-background-color: rgba(27, 31, 35, 0.05);
     --code-border-color: rgba(27, 31, 35, 0.3);
     --text-primary-light-color: #555555;
@@ -17,8 +15,6 @@ body[data-theme="dark"] {
     --text-shadow-color: #888888;
     --text-primary-color: #fdfdfd;
     --link-hover: #555555;
-    --github: #24292e;
-    --github-invert: #ffffff;
     --code-background-color: rgba(190, 197, 204, 0.1);
     --code-border-color: rgba(190, 197, 204, 0.4);
     --text-primary-light-color: #cccccc;
@@ -38,11 +34,6 @@ $text-primary-lighter-color: #bbbbbb;
 
 $code-background-color: var(--code-background-color);
 $code-border-color: var(--code-border-color);
-
-$linkedin: $primary-color;
-$azuredevops: $primary-color;
-$github: $primary-color;
-$github-invert: $primary-color;
 
 .language {
     background-color: #42a5f5 !important;
