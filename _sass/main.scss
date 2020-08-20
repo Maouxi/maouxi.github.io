@@ -47,10 +47,13 @@ a:hover {
 
 .tag {
     @extend %tag-shared;
+    font-size: 12px;
 }
 .tag-small {
     @extend %tag-shared;
-    font-size: 12px;
+    font-size: 10px;
+    margin-right: 5px;
+    padding: 3px 6px;
 }
 
 .list-item {
