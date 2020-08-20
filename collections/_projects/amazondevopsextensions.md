@@ -8,7 +8,7 @@ skills: [TypeScript, Azure Devops, GiHub]
 
 Tasks for Amazon AppStore submission api and make continuous delivery on Azure DevOps Services pipeline build or release.
 
-[https://marketplace.visualstudio.com/publishers/MaxenceRaoux](https://marketplace.visualstudio.com/publishers/MaxenceRaoux)
+[Access myy VisualStudio marketplace](https://marketplace.visualstudio.com/publishers/MaxenceRaoux)
 
 ## Tasks
 

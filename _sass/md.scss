@@ -42,6 +42,7 @@ a:hover {
 
 img {
     max-width: 100%;
+    box-shadow: 2px 2px 2px $shadow;
 }
 
 code {
@@ -98,9 +99,20 @@ b {
     font-weight: bold;
 }
 
-td {
-    text-align: center;
-    vertical-align: middle;
+table {
+    width: 100%;
+    td {
+        text-align: center;
+        vertical-align: middle;
+    }
+    &.align-left {
+        width: 0;
+        max-width: 100%;
+        td {
+            text-align: left;
+            vertical-align: auto;
+        }
+    }
 }
 
 .icon {
