@@ -25,3 +25,8 @@ defaults:
       layout: "project"
 
 google_analytics: UA-175915561-1
+
+markdown: kramdown
+
+kramdown:
+  syntax_highlighter: rouge

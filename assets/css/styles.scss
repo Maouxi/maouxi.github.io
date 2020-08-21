@@ -8,6 +8,17 @@
 @import "footer";
 @import "home";
 @import "item-list";
+
 .md {
     @import "md";
+}
+body[data-theme="dark"] {
+    .md {
+        @import "code-dark";
+    }
+}
+:root {
+    .md {
+        @import "code-light";
+    }
 }

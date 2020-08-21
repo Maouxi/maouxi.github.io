@@ -1,25 +1,3 @@
-div.highlight {
-    background-color: $code-background-color;
-    padding: 7px 7px 7px 10px;
-    border-radius: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-    code {
-        background-color: transparent;
-    }
-}
-
-h2,
-h3,
-h4,
-h4,
-h6,
-table,
-p {
-    margin: 10px 0px;
-}
-
 header {
     h1 {
         margin-bottom: 0px;
@@ -30,9 +8,40 @@ header {
         margin-bottom: 10px;
         font-size: 14px;
     }
+    margin-bottom: 25px;
+    border-bottom: solid 1px $shadow;
 }
 
-a {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+table,
+p {
+    color: $text-primary-color;
+    margin: 10px 0px;
+    line-height: 1.2em;
+}
+
+h2 {
+    font-size: 22px;
+    padding-bottom: 5px;
+    border-bottom: solid 1px $shadow;
+    margin: 25px 0px;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    margin: 25px 0px;
+    font-size: 16px;
+}
+
+a,
+a:visited {
     color: $primary-color;
 }
 a:hover {
@@ -46,12 +55,23 @@ img {
 }
 
 code {
-    background-color: $code-background-color;
     color: $text-primary-color;
-    padding: 2px;
-    font-size: 15px;
+    padding: 2px 5px;
     border-radius: 5px;
-    font-family: "Bitstream Vera Sans Mono", "Courier", monospace;
+    background-color: $code-background-color;
+}
+
+div.highlight {
+    background-color: $code-background-color;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    overflow-x: auto;
+    code {
+        padding: 0px;
+        background-color: transparent;
+    }
 }
 
 ul,
@@ -96,7 +116,7 @@ i {
 
 strong,
 b {
-    font-weight: bold;
+    font-weight: 600;
 }
 
 table {
@@ -112,6 +132,19 @@ table {
             text-align: left;
             vertical-align: auto;
         }
+    }
+}
+
+blockquote {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    padding-left: 5px;
+    background-color: $code-background-color;
+    p {
+        padding-left: 10px;
+        margin: 0;
+        background-color: $background-color;
     }
 }
 
