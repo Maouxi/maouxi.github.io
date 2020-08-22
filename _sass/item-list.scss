@@ -7,7 +7,15 @@
         display: flex;
         flex-flow: column nowrap;
         margin-left: 15px;
-        .skills {            
+        .list-item-date {
+            &:before {
+                content: " • ";
+            }
+            color: $text-primary-lighter-color;
+            font-size: 14px;
+            font-weight: normal;
+        }
+        .skills {
             display: flex;
             flex-flow: row wrap;
         }

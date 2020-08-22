@@ -3,9 +3,29 @@ title: Blog
 ---
 <section>
   {% for post in site.posts %}
-  <div class="list-item">
-    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-    <p>{{ post.excerpt }}</p>
+  <div class="content list-item">
+    <div class="list-item-icons">
+      {% for iconname in post.icons %}
+      {% assign icon = site.data.icons | where_exp: "i", "i.tag == iconname" | first %}
+      <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 25 25">
+        <title>{{icon.name}}</title>
+        {{ icon.svg }}
+      </svg>
+      {% endfor %}
+    </div>
+    <div class="list-item-content">
+      <h2>
+        <a href="{{ post.url }}"> {{ post.title }}</a>
+        <span class="list-item-date">{{ post.date | date_to_string }}</span>
+      </h2>
+      {{ post.excerpt }}
+      <div class="skills">
+        {% for s in post.skills %}
+        {% assign skill = site.data.skills | where: "name", s   | first  %}
+        <span class="tag-small {{ skill.category }} light">{{ skill.name }}</span>
+        {% endfor %}
+      </div>
+    </div>
   </div>
   {% endfor %}
 </section>
