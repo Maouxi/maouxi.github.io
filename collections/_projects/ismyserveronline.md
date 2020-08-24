@@ -30,3 +30,56 @@ Monitor yout servers status within an Android application.
 - Notification on server status change or when updated
 - Light and Dark theme.
 
+## Development
+
+Develop in kotlin with intensive usage of [coroutine](https://developer.android.com/kotlin/coroutines){:target="_blank"}. Follow the MVVM architecture with [android architecture component](https://developer.android.com/topic/libraries/architecture/){:target="_blank"} (LiveData - ViewModel - Room) and use dependency injection with [Koin](https://insert-koin.io/){:target="_blank"}. 
+
+The biggest challenge was to handle Android background tasks to refresh servers status. It use Android [worker](https://developer.android.com/reference/androidx/work/Worker){:target="_blank"} but it wasn't enougth so it also use the basic android [alarm manager](https://developer.android.com/reference/android/app/AlarmManager){:target="_blank"}.
+I thinking about writting an article on how to achieve this correclty. 
+
+I have also have some difficulties to get the mobile signal quality. I write an article about that [here](/blog/2020/08/android-signal-quality). 
+
+## Devops
+
+Fully integrate on [Azure Devops](https://azure.microsoft.com/fr-fr/services/devops/){:target="_blank"}. 
+
+| ![IsMyServerOnline - Devops dashboard]({{page.img_url}}dashboard.png){:style="width: 800px"} |
+| Azure devops IsMyServerOnline dashboard |
+
+### Boards
+
+Use Kanban (Todo, doing, done) to follow bugs and new features. 
+
+| ![IsMyServerOnline - Devops kaban board]({{page.img_url}}board.png){:style="width: 800px"} |
+| Azure devops IsMyServerOnline Kaban board |
+
+### Repository
+
+One git repository on Azure Devops. Usage of git flow. 
+
+#### Pipelines
+
+_Build_ 
+
+One build pipeline write in yaml (to keep history on the git repository) that trigger on the develop and release/* branches. 
+This pipeline: 
+- Build the project 
+- Create the release apk signed and unsigned
+- Create the release app bundle (aab) signed and unsigned
+- Execute unit test and instrumented test (on simulator)
+- Execute the code coverage (with unit and instrumented tests using [Jacoco](https://www.jacoco.org/jacoco/){:target="_blank"})
+
+| ![IsMyServerOnline - Devops build]({{page.img_url}}board.png){:style="width: 800px"} |
+| Azure devops IsMyServerOnline build result |
+
+_Release_
+
+Two release pipeline. One for the Google PlayStore, one for the Amazon AppStore. 
+
+The Amazon AppStore release use the [Amazon Devops Extensions](/projects/amazondevopsextensions) I made. It prepare the release and then publish it. It has only one manual task between the too steps, update the application description and changelog. 
+
+The Google PlayStore release is fully automatized from the testing release to the production release. It use the metadata files hierarchy to update the PlayStore description. 
+
+| ![IsMyServerOnline - Devops release playstore]({{page.img_url}}release.png){:style="width: 800px"} |
+| Azure devops IsMyServerOnline release PlayStore |
+

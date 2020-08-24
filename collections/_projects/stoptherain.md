@@ -14,7 +14,6 @@ Stop the rain with only one button to push! Why?! Just to give a try on the Flut
 - If no raining predict how many time is going to stay sunny
 - Oh you have one prediction credit by hours. To get more you have to watch an ads 💩 
 
-
 ## Screenshots
 
 {::nomarkdown}
