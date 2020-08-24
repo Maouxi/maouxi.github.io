@@ -33,7 +33,7 @@ Build in angular, generated with Angular CLI. Hosted in Microsoft Azure.
 | ![Tournesol Mobile - Home]({{page.img_url}}screenshot1.png){:style="width:250px;"} |  | ![Tournesol Mobile - Event bring]({{page.img_url}}screenshot2.png){:style="width:250px;"} |  | ![Tournesol Mobile - Event to bring]({{page.img_url}}screenshot3.png){:style="width:250px;"} |
 
 | {::nomarkdown}<svg  role="img" viewBox="0 0 24 24" class="icon big">{{googleplay-icon.svg}}</svg>{:/} |
-| [Download on Google Play](https://play.google.com/store/apps/details?id=com.maoux.tournesol){:target="_blank"} |
+| [Download on Google Play](https://play.google.com/store/apps/details?id=fr.me.maoux.tournesol){:target="_blank"} |
 
 ### Web API
 
