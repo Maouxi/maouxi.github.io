@@ -6,6 +6,13 @@ skills: [Android, Kotlin]
 
 Getting the mobile signal strength on Android has different behavior by the minimum API level you target.
 
+* [Difference by API](#difference-by-api)  
+* [Let's code](#lets-code)
+    * [Android API >= 29](#android-api--29)
+    * [Android API >= 23](#android-api--23)
+    * [Android API >= 17](#android-api--17)
+* [All together](#all-together)
+
 ## Difference by API 
 
 - *Android API >= 29 (10 - Q)* use the TelephonyService and register for the signal strength event. 
@@ -14,11 +21,11 @@ Getting the mobile signal strength on Android has different behavior by the mini
 
 - *Android API >= 17 (4.2 - Jelly Bean)* you have to use the TelephonyService and register for the cell info event and add permission to the coarce location. 
 
-- *Others* at the time I write this article they are 0.8%. I don't investigate more.  
+- *Others* at the time I write this article they are 0.8%. I don't investigate more. [Android distribution by api version](#android-distribution-by-api-version)
 
 ## Let's code
 
-### Android API >= 19
+### Android API >= 29
 
 Ok, that's the easy part! 
 You need to access the Android TelephonyService, And register to the `LISTEN_SIGNAL_STRENGTHS` event. 
@@ -34,7 +41,7 @@ Now we can override the `onSignalStrengthsChanged()` method of the PhoneStateLis
 
 ```kotlin
 override fun onSignalStrengthsChanged(signalStrength: SignalStrength?) {
-    // Direct access to 0-4 strength level.
+    // Direct access to 0-4 strength level or null. 
     var strength = signalStrength?.level
 
     // You can get more informations about the signal
@@ -42,8 +49,8 @@ override fun onSignalStrengthsChanged(signalStrength: SignalStrength?) {
 }
 ```
 
-We get a SignalStrength object. You can call both the `getLevel()` (it could be enough for most of usages) and `getCellSignalStrengths()` methods. 
-- getLevel: gives you the signal strength. From 0 to 4.
+We got a SignalStrength object. You can call both the `getLevel()` (it could be enough for most of usages) and `getCellSignalStrengths()` methods. 
+- getLevel: gives you the signal strength. From 0 to 4. ([level signification](#signal-strength-values))
 - getCellSignalStrengths: gives you a list of CellSignalStrength that provide more granular information about the signal.
 
 > Note that the first time you listen for this event the callback is called once. Then it will be called only if a change appear. 
@@ -60,12 +67,12 @@ No virtual method getCellSignalStrengths()Ljava/util/List;
 
 If you need more informations about the signal strength you have to jump to the next section. 
 
-> Validate is trully necessary for your use case to request access to the `getCellSignalStrengths()`. You are going to add the location permission. This permission need to be requested at runtime on Android 23 and above and complicat the implementation, even more user don't really likes to share their position if they don't know why!
+> Validate is trully necessary for your use case to request access to the `getCellSignalStrengths()`. You are going to add the location permission. This permission need to be requested at runtime on Android 23 and above and and makes implementation more difficult. Also, user don't really likes to share their position if they don't know why!
 
-### Android API < 23
+### Android API >= 17
 
 You need to add the `ACCESS_COARSE_LOCATION` permission to the manifest. 
-Why!? I don't find an offical doc. But this callback gives more information than the simple signal strengths, and they probably can be used to localize the user.
+Why!? I don't find an offical doc. But this callback gives more information than the simple signal strength, and it probably can be used to localize the user.
 
 ```xml
 <manifest>
@@ -79,6 +86,7 @@ Notice than we need to check if the permission is granted for the coarse locatio
 ```kotlin
 val telephonyManager = context.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
 if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M ){
+    // This check need to be done only for API >= 23. A permission request need to be done if access is not granted.
     ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED -> {
         telephonyManager.listen(this, LISTEN_CELL_INFO)
     }
@@ -93,7 +101,7 @@ Now we can override the `onCellInfoChanged()` method of the PhoneStateListener c
 ```kotlin
 override fun onCellInfoChanged(cellInfos: MutableList<CellInfo>?) {
     super.onCellInfoChanged(cellInfos)
-    // 0-4 strength level or null.
+    // 0-4 strength level or null. ([level signification](#signal-strength-values))
     val strengthLevel = if (cellInfos != null && cellInfos.isNotEmpty()) {
         cellInfos.map { cellInfo ->
             when (cellInfo) {
@@ -112,9 +120,9 @@ override fun onCellInfoChanged(cellInfos: MutableList<CellInfo>?) {
 }
 ```
 
-## All together !
+## All together
 
-If like me you uniquely wan't to get the signal strength. You can avoid to handle the permission request at runtime. Here is a working code to simply get the signal strength that works with a min API 17. 
+If you only want the signal strength. You can avoid to handle the permission request at runtime. Here is a working code to simply get the signal strength with a  17 min sdk API. 
 
 We use the location permision in the manifest but only for API before 23
 
@@ -124,7 +132,7 @@ We use the location permision in the manifest but only for API before 23
 </manifest>
 ```
 
-Then we listen event by API version: 
+Then we listen events differently by API version: 
 
 ```kotlin
 class SignalStrengthService(val context: Context) : PhoneStateListener() {
@@ -135,7 +143,9 @@ class SignalStrengthService(val context: Context) : PhoneStateListener() {
     // Initialise the signal strength changes
     fun listenToSignalStrengthChanges(){
         when {
+            // API >= 23
             Build.VERSION.SDK_INT >= Build.VERSION_CODES.M -> telephonyManager.listen(this, LISTEN_SIGNAL_STRENGTHS)
+            // API >= 17
             else -> telephonyManager.listen(this, LISTEN_CELL_INFO)
         }    
     }
@@ -176,14 +186,14 @@ class SignalStrengthService(val context: Context) : PhoneStateListener() {
 
 ## Annexes
 
-### Signal strength common values
+### Signal strength values
 - 0 No signal
 - 1 Poor signal
 - 2 Moderate signal
 - 3 Good signal
 - 4 Excelent signal
 
-### Android distribution by API level
+### Android distribution by API version
 
-| ![Android distribution by API level](/assets/img/blog/android-signal-quality/android-api-2020.PNG){:style="width:500px;"} | 
+| ![Android distribution by API version](/assets/img/blog/android-signal-quality/android-api-2020.PNG){:style="width:500px;"} | 
 | Source: Android Studio (August 2020) |
