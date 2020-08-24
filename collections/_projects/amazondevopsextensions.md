@@ -17,6 +17,10 @@ Tasks for Amazon AppStore submission api and make continuous delivery on Azure D
 - __ReplaceApkTask__: Replace an apk into the current update
 - __CommitTask__: Commit the update to the Amazon AppStore
 
+## Still in development
+
+The edit task need to be improved by allow reading in metadata files. 
+
 ## Screenshot
 
 | ![Replace Task]({{page.img_url}}screenshot.png){:style="width:600px;"} |
@@ -26,4 +30,6 @@ Tasks for Amazon AppStore submission api and make continuous delivery on Azure D
 
 Projet source code and wiki are hosted on GitHub: [amazon-store-api-azure-devops-pipeline-extensions](https://github.com/Maouxi/amazon-store-api-azure-devops-pipeline-extensions)
 
-Project boards and pipeline are hosted on Azure Devops: [AmazonDevOpsExtensions](https://dev.azure.com/maxenceraoux/AmazonDevOpsExtensions)
+Project boards and pipelines are hosted on Azure Devops: [AmazonDevOpsExtensions](https://dev.azure.com/maxenceraoux/AmazonDevOpsExtensions)
+
+Their is one build and release pipeline by task.

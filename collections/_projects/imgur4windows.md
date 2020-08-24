@@ -21,7 +21,7 @@ Client for imgur on windows 10 devices.
 - Share gallery and save pictures
 - Show your notifications
 
-## They speak about the app
+## They speaks about the app
 
 [Windows Central - Windows 10 apps you should try](https://www.windowscentral.com/5-windows-10-apps-you-should-try-july-15-2016)
 

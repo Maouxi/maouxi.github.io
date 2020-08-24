@@ -82,4 +82,3 @@ The Google PlayStore release is fully automatized from the testing release to th
 
 | ![IsMyServerOnline - Devops release playstore]({{page.img_url}}release.png){:style="width: 800px"} |
 | Azure devops IsMyServerOnline release PlayStore |
-

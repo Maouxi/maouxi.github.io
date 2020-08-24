@@ -1,12 +1,13 @@
 ---
 title: Home
+description: Maxence Raoux website. Android & .Net developer. Discover my skills, projects and blog. 
 ---
 <div class="home-header">
     <article class="content">
         <img src="/assets/img/profil.jfif" class="avatar" />
         <div class="home-header-content">
             <h1>Maxence Raoux - <span id="myage">-</span> ans</h1>
-            <p>Android & .Net developer </p>
+            <p>Android & .Net developer</p>
             <div class="home-header-tags">
                 {% assign favorite_skills = site.data.skills | where: "fav", "true" %}
                 {% for skill in favorite_skills %}
