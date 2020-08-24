@@ -184,7 +184,7 @@ class SignalStrengthService(val context: Context) : PhoneStateListener() {
 }
 ```
 
-## Annexes
+## Annex
 
 ### Signal strength values
 - 0 No signal

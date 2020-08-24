@@ -1,6 +1,6 @@
 ---
 title: Tournesol
-date: 20/08/2020
+date: 03/07/2018
 img_url: /assets/img/projects/tournesol/
 icons: [android, angular, azure]
 skills: [Android, Angular, .Net, Azure, Kotlin, TypeScript, RxJava, Azure Devops,  Git]
@@ -9,6 +9,14 @@ skills: [Android, Angular, .Net, Azure, Kotlin, TypeScript, RxJava, Azure Devops
 The tournesol application allow people to define who brings what to an event.
 
 Why I choose tournesol name? I'm sur you don't care 😈
+
+## Features
+
+- Create/Join/Share an event
+- Create new item to bring
+- Assign an item to yourseld or to other participant
+- Receive notification when the events items were updated
+- No registration needed !
 
 ## Project organization
 
@@ -38,3 +46,7 @@ Build in angular, generated with Angular CLI. Hosted in Microsoft Azure.
 ### Web API
 
 Build with .Net Core Rest Api. Hosted with Microsoft Azure. 
+
+The server main goal is to synchronize events created and edited on the differents platformes. All modifications ar timestamped, and when a synchronization occurs, the last one is right. 
+
+It also send notification to user if they are concerned (only on Android). Because the app don't have registration, the notification id is used to reconize users.      
