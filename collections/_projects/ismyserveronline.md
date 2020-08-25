@@ -43,14 +43,14 @@ I have also have some difficulties to get the mobile signal quality. I write an 
 
 Fully integrate on [Azure Devops](https://azure.microsoft.com/fr-fr/services/devops/){:target="_blank"}. 
 
-| ![IsMyServerOnline - Devops dashboard]({{page.img_url}}dashboard.png){:style="width: 800px"} |
+| ![IsMyServerOnline - Devops dashboard]({{page.img_url}}devops-dashboard.png){:style="width: 800px"} |
 | Azure devops IsMyServerOnline dashboard |
 
 ### Boards
 
 Use Kanban (Todo, doing, done) to follow bugs and new features. 
 
-| ![IsMyServerOnline - Devops kaban board]({{page.img_url}}board.png){:style="width: 800px"} |
+| ![IsMyServerOnline - Devops kaban board]({{page.img_url}}devops-board.png){:style="width: 800px"} |
 | Azure devops IsMyServerOnline Kaban board |
 
 ### Repository
@@ -69,7 +69,7 @@ This pipeline:
 - Execute unit test and instrumented test (on simulator)
 - Execute the code coverage (with unit and instrumented tests using [Jacoco](https://www.jacoco.org/jacoco/){:target="_blank"})
 
-| ![IsMyServerOnline - Devops build]({{page.img_url}}board.png){:style="width: 800px"} |
+| ![IsMyServerOnline - Devops build]({{page.img_url}}devops-board.png){:style="width: 800px"} |
 | Azure devops IsMyServerOnline build result |
 
 _Release_
@@ -80,5 +80,5 @@ The Amazon AppStore release use the [Amazon Devops Extensions](/projects/amazond
 
 The Google PlayStore release is fully automatized from the testing release to the production release. It use the metadata files hierarchy to update the PlayStore description. 
 
-| ![IsMyServerOnline - Devops release playstore]({{page.img_url}}release.png){:style="width: 800px"} |
+| ![IsMyServerOnline - Devops release playstore]({{page.img_url}}devops-release.png){:style="width: 800px"} |
 | Azure devops IsMyServerOnline release PlayStore |
