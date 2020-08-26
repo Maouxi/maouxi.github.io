@@ -30,6 +30,8 @@ Build in angular, generated with Angular CLI. Hosted in Microsoft Azure.
 
 {::nomarkdown} {% assign browser-icon = site.data.icons | where_exp: "i", "i.tag == 'browser'" | first %}{:/}
 
+|     |
+| :-: |
 | ![Tournesol Web - Home]({{page.img_url}}web-screenshot1.png){:style="width:600px;"} |
 | {::nomarkdown}<svg  role="img" viewBox="0 0 24 24" class="icon big">{{browser-icon.svg}}</svg>{:/} |
 | [Access the Tournesol web app.](https://tournesol-webapp.azurewebsites.net/){:target="_blank"} |
@@ -38,8 +40,13 @@ Build in angular, generated with Angular CLI. Hosted in Microsoft Azure.
 
 {::nomarkdown} {% assign googleplay-icon = site.data.icons | where_exp: "i", "i.tag == 'googleplay'" | first %}{:/}
 
-| ![Tournesol Mobile - Home]({{page.img_url}}screenshot1.png){:style="width:250px;"} |  | ![Tournesol Mobile - Event bring]({{page.img_url}}screenshot2.png){:style="width:250px;"} |  | ![Tournesol Mobile - Event to bring]({{page.img_url}}screenshot3.png){:style="width:250px;"} |
 
+|  |  |  |
+| -: | :-: | :- |
+| ![Tournesol Mobile - Home]({{page.img_url}}screenshot1.png){:style="width:250px;"} | ![Tournesol Mobile - Event bring]({{page.img_url}}screenshot2.png){:style="width:250px;"} | ![Tournesol Mobile - Event to bring]({{page.img_url}}screenshot3.png){:style="width:250px;"} |
+
+|  |
+| :-: |
 | {::nomarkdown}<svg  role="img" viewBox="0 0 24 24" class="icon big">{{googleplay-icon.svg}}</svg>{:/} |
 | [Download on Google Play](https://play.google.com/store/apps/details?id=fr.me.maoux.tournesol){:target="_blank"} |
 

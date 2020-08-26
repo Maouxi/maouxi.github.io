@@ -20,7 +20,11 @@ Stop the rain with only one button to push! Why?! Just to give a try on the Flut
 {% assign googleplay-icon = site.data.icons | where_exp: "i", "i.tag == 'googleplay'" | first %}
 {:/}
 
+|  |  |  |
+| -: | :-: | :- |
 | ![StopTheRain - Home]({{page.img_url}}screenshot1.png){:style="width:220px;"} | ![StopTheRain - Prediction]({{page.img_url}}screenshot3.png){:style="width:275px;"} | ![StopTheRain - Menu]({{page.img_url}}screenshot2.png){:style="width:220px;"} |
 
+|  |
+| :-: |
 | {::nomarkdown}<svg  role="img" viewBox="0 0 24 24" class="icon big">{{googleplay-icon.svg}}</svg>{:/} |
 | [Download on Google Play](https://play.google.com/store/apps/details?id=com.maoux.stoptherain){:target="_blank"} |

@@ -7,11 +7,7 @@ title: Blog
   <div class="content list-item">
     <div class="list-item-icons">
       {% for iconname in post.icons %}
-      {% assign icon = site.data.icons | where_exp: "i", "i.tag == iconname" | first %}
-      <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 25 25">
-        <title>{{icon.name}}</title>
-        {{ icon.svg }}
-      </svg>
+      {% include icon.html ic = iconname %}
       {% endfor %}
     </div>
     <div class="list-item-content">

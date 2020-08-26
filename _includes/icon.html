@@ -1,0 +1,5 @@
+{% assign icon = site.data.icons | where_exp: "i", "i.tag == include.ic" | first %}
+<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 25 25" class="{{icon.tag}} {{include.class}}">
+    <title>{{icon.name}}</title>
+    {{ icon.svg }}
+</svg>

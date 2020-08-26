@@ -23,6 +23,8 @@ The edit task need to be improved by allow reading in metadata files.
 
 ## Screenshot
 
+|  |
+| :-: |
 | ![Replace Task]({{page.img_url}}screenshot.png){:style="width:600px;"} |
 | Azure Devops view of the Replace Apk Task |
 

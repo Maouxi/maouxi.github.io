@@ -122,18 +122,6 @@ b {
 
 table {
     width: 100%;
-    td {
-        text-align: center;
-        vertical-align: middle;
-    }
-    &.align-left {
-        width: 0;
-        max-width: 100%;
-        td {
-            text-align: left;
-            vertical-align: auto;
-        }
-    }
 }
 
 blockquote {

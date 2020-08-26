@@ -7,14 +7,17 @@ skills: [Android, Kotlin, Azure Devops, Git]
 ---
 Monitor yout servers status within an Android application.
 
+|  |  |  |  |  |
+| :-: | :-: | :-: | :-: | :-: |
 | ![IsMyServerOnline - Home]({{page.img_url}}screenshot1.png) | ![IsMyServerOnline - Notifications]({{page.img_url}}screenshot2.png) | ![IsMyServerOnline - Server details]({{page.img_url}}screenshot3.png) | ![IsMyServerOnline - Settings]({{page.img_url}}screenshot4.png) | ![IsMyServerOnline - Server configuration]({{page.img_url}}screenshot5.png)
 
 {::nomarkdown}
 {% assign googleplay-icon = site.data.icons | where_exp: "i", "i.tag == 'googleplay'" | first %}
 {% assign amazon-icon = site.data.icons | where_exp: "i", "i.tag == 'amazon'" | first %}
 {:/}
- 
+
 | {::nomarkdown}<svg  role="img" viewBox="0 0 24 24" class="icon big">{{googleplay-icon.svg}}</svg>{:/} | {::nomarkdown}<svg role="img" viewBox="0 0 24 24" class="icon big">{{amazon-icon.svg}}</svg>{:/} |
+| :-: | :-: |
 | [Download on Google Play](https://play.google.com/store/apps/details?id=com.maoux.ismyserveronline){:target="_blank"} | [Download on Amazon AppStore](https://www.amazon.fr/My-Server-Online-Monitorez-serveurs/dp/B088193K9W/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=ismyserveronline&qid=1597831390&s=mobile-apps&sr=1-1){:target="_blank"} |
 
 ## Features
@@ -43,6 +46,8 @@ I have also have some difficulties to get the mobile signal quality. I write an 
 
 Fully integrate on [Azure Devops](https://azure.microsoft.com/fr-fr/services/devops/){:target="_blank"}. 
 
+|  |
+| :-: |
 | ![IsMyServerOnline - Devops dashboard]({{page.img_url}}devops-dashboard.png){:style="width: 800px"} |
 | Azure devops IsMyServerOnline dashboard |
 
@@ -50,6 +55,8 @@ Fully integrate on [Azure Devops](https://azure.microsoft.com/fr-fr/services/dev
 
 Use Kanban (Todo, doing, done) to follow bugs and new features. 
 
+|  |
+| :-: |
 | ![IsMyServerOnline - Devops kaban board]({{page.img_url}}devops-board.png){:style="width: 800px"} |
 | Azure devops IsMyServerOnline Kaban board |
 
@@ -69,6 +76,8 @@ This pipeline:
 - Execute unit test and instrumented test (on simulator)
 - Execute the code coverage (with unit and instrumented tests using [Jacoco](https://www.jacoco.org/jacoco/){:target="_blank"})
 
+|  |
+| :-: |
 | ![IsMyServerOnline - Devops build]({{page.img_url}}devops-board.png){:style="width: 800px"} |
 | Azure devops IsMyServerOnline build result |
 
@@ -80,5 +89,7 @@ The Amazon AppStore release use the [Amazon Devops Extensions](/projects/amazond
 
 The Google PlayStore release is fully automatized from the testing release to the production release. It use the metadata files hierarchy to update the PlayStore description. 
 
+|  |
+| :-: |
 | ![IsMyServerOnline - Devops release playstore]({{page.img_url}}devops-release.png){:style="width: 800px"} |
 | Azure devops IsMyServerOnline release PlayStore |

@@ -31,6 +31,8 @@ Client for imgur on windows 10 devices.
 
 ## Screenshots
 
+|     |     |
+| :-: | :-: |
 | ![Imgur4Windows - Home]({{page.img_url}}screenshot1.jfif)  | ![Imgur4Windows - Details]({{page.img_url}}screenshot2.jfif)  |
 | ![Imgur4Windows - Comments]({{page.img_url}}screenshot3.jfif)  | ![Imgur4Windows - Upload]({{page.img_url}}screenshot4.jfif)  |
 | ![Imgur4Windows - User]({{page.img_url}}screenshot5.jfif)  | ![Imgur4Windows - Settings]({{page.img_url}}screenshot6.jfif)  | 
