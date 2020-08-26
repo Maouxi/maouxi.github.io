@@ -28,6 +28,24 @@ article {
     margin: auto;
 }
 
+#breadcrumbs {
+    color: $text-primary-lighter-color;
+    font-size: 14px;
+    a {
+        color: $text-primary-lighter-color;
+    }
+    a:hover {
+        text-decoration: underline;
+        background-color: transparent;
+    }
+}
+
+section {
+    #breadcrumbs {
+        margin-bottom: 15px;
+    }
+}
+
 h1 {
     font-size: 28px;
     margin-bottom: 10px;

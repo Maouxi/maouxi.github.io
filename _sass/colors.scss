@@ -7,6 +7,7 @@
     --code-background-color: rgba(27, 31, 35, 0.05);
     --code-border-color: rgba(27, 31, 35, 0.3);
     --text-primary-light-color: #555555;
+    --text-primary-lighter-color: #bbbbbb;
 }
 
 body[data-theme="dark"] {
@@ -18,6 +19,7 @@ body[data-theme="dark"] {
     --code-background-color: #272822;
     --code-border-color: rgba(190, 197, 204, 0.4);
     --text-primary-light-color: #cccccc;
+    --text-primary-lighter-color: #888888;
 }
 
 $background-color: var(--background-color);
@@ -30,7 +32,7 @@ $primary-color: #f4511e;
 $text-primary-color-invert: #fdfdfd;
 $text-primary-light-color: var(--text-primary-light-color);
 $text-primary-light-color-invert: #fafafa;
-$text-primary-lighter-color: #bbbbbb;
+$text-primary-lighter-color: var(--text-primary-lighter-color);
 
 $code-background-color: var(--code-background-color);
 $code-border-color: var(--code-border-color);

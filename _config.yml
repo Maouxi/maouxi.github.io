@@ -1,6 +1,6 @@
 baseurl: ""
 
-permalink: /blog/:year/:month/:title.html
+permalink: /blog/:title.html
 
 collections_dir: collections
 

@@ -1,7 +1,8 @@
 ---
-title: My projects
+title: Projects
 ---
 <section>
+  {% include breadcrumb.html %}
   {% assign projects = site.projects | sort: "date" | reverse %}
   {% for project in projects %}
   <div class="content list-item">
