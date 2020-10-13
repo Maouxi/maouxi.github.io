@@ -4,6 +4,7 @@ date: 15/04/2020
 img_url: /assets/img/projects/ismyserveronline/
 icons: [android]
 skills: [Android, Kotlin, Azure Devops, Git]
+display: true
 ---
 Monitor yout servers status within an Android application.
 
@@ -28,7 +29,7 @@ Monitor yout servers status within an Android application.
 - Add servers / website via their IP address or web domain name.
 - Supports HTTP and HTTPS protocols.
 - Support TCP protocol with port specification.
-- Support PING command.
+- Support PING/PING6 command with packet size and ttl configuration.
 - Configurable auto-refresh at specified interval, timeout, retry count and interval between retry, returned http code check, refresh on wifi only, refresh with a min signal quality. 
 - Notification on server status change or when updated
 - Light and Dark theme.
@@ -93,3 +94,9 @@ The Google PlayStore release is fully automatized from the testing release to th
 | :-: |
 | ![IsMyServerOnline - Devops release playstore]({{page.img_url}}devops-release.png){:style="width: 800px"} |
 | Azure devops IsMyServerOnline release PlayStore |
+
+## Legal
+
+[Privacy policy](/projects/ismyserveronline/ismyserveronline-privacy)
+
+[Terms & conditions](/projects/ismyserveronline/ismyserveronline-terms)

@@ -4,6 +4,7 @@ date: 12/07/2015
 img_url: /assets/img/projects/imgur4windows/
 icons: [c-sharp]
 skills: [UWP, C#, Git]
+display: true
 ---
 
 Client for imgur on windows 10 devices.

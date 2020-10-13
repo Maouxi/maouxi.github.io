@@ -4,6 +4,7 @@ date: 12/11/2019
 img_url: /assets/img/projects/stoptherain/
 icons: [flutter]
 skills: [Android, Flutter, Dart, Git]
+display: true
 ---
 Stop the rain with only one button to push! Why?! Just to give a try on the Flutter framework!
 

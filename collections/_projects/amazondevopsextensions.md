@@ -4,6 +4,7 @@ date: 16/08/2020
 img_url: /assets/img/projects/amazondevopsextensions/
 icons: [azuredevops]
 skills: [TypeScript, Azure Devops, GiHub]
+display: true
 ---
 
 Tasks for Amazon AppStore submission api and make continuous delivery on Azure DevOps Services pipeline build or release.
