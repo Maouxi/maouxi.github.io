@@ -79,7 +79,7 @@ This pipeline:
 
 |  |
 | :-: |
-| ![IsMyServerOnline - Devops build]({{page.img_url}}devops-board.png){:style="width: 800px"} |
+| ![IsMyServerOnline - Devops build]({{page.img_url}}devops-build.png){:style="width: 800px"} |
 | Azure devops IsMyServerOnline build result |
 
 _Release_
