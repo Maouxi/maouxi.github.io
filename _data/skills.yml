@@ -42,6 +42,16 @@
   stars: 3
   display: true
   link: https://angular.io/
+- name: Reactjs
+  category: framework
+  stars: 4
+  display: true
+  link: https://fr.reactjs.org/
+- name: React Native
+  category: framework
+  stars: 3
+  display: true
+  link: https://reactnative.dev/
 - name: Xamarin
   category: framework
   stars: 2
