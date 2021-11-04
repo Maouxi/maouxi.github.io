@@ -34,7 +34,7 @@
   link: https://azure.microsoft.com/
 - name: Flutter
   category: framework
-  stars: 1
+  stars: 4
   display: true
   link: https://flutter.dev/
 - name: Angular
@@ -89,7 +89,7 @@
   display: true
 - name: Dart
   category: language
-  stars: 1
+  stars: 4
   display: true
 - name: HTML - CSS
   category: language
