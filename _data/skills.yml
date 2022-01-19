@@ -4,11 +4,18 @@
   stars: 5
   display: true
   link: https://www.android.com/
-- name: Android Jetpack
+- name: Azure
   category: framework
-  stars: 5
+  fav: true
+  stars: 4
   display: true
-  link: https://developer.android.com/jetpack/
+  link: https://azure.microsoft.com/
+- name: Firebase
+  category: framework
+  fav: true
+  stars: 4
+  display: true
+  link: https://firebase.google.com/
 - name: .Net
   category: framework
   fav: true
@@ -26,12 +33,6 @@
   stars: 4
   display: true
   link: https://docs.microsoft.com/en-Us/windows/uwp/
-- name: Azure
-  category: framework
-  fav: true
-  stars: 3
-  display: true
-  link: https://azure.microsoft.com/
 - name: Flutter
   category: framework
   stars: 4
@@ -39,7 +40,7 @@
   link: https://flutter.dev/
 - name: Angular
   category: framework
-  stars: 3
+  stars: 4
   display: true
   link: https://angular.io/
 - name: Reactjs
@@ -49,12 +50,12 @@
   link: https://fr.reactjs.org/
 - name: React Native
   category: framework
-  stars: 3
+  stars: 4
   display: true
   link: https://reactnative.dev/
 - name: Xamarin
   category: framework
-  stars: 2
+  stars: 3
   display: true
   link: https://dotnet.microsoft.com/apps/xamarin
 - name: Jekyll
@@ -62,6 +63,10 @@
   stars: 3
   display: true
   link: https://jekyllrb.com/
+- name: Rx[Java]
+  category: framework
+  stars: 3
+  display: true
 
 - name: Kotlin
   category: language
@@ -80,12 +85,12 @@
   stars: 5
 - name: TypeScript
   category: language
-  stars: 2
+  stars: 3
   display: true
   link: https://www.typescriptlang.org/
 - name: JavaScript
   category: language
-  stars: 2
+  stars: 3
   display: true
 - name: Dart
   category: language
@@ -106,10 +111,6 @@
 - name: SQL
   category: language
   stars: 4
-  display: true
-- name: RxJava
-  category: language
-  stars: 3
   display: true
 
 - name: Git
@@ -187,6 +188,9 @@
   display: true
 
 - name: MVVM
+  category: architecture
+  display: true
+- name: Repository
   category: architecture
   display: true
 - name: MVC

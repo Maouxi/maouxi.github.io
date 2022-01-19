@@ -29,3 +29,9 @@ Stop the rain with only one button to push! Why?! Just to give a try on the Flut
 | :-: |
 | {::nomarkdown}<svg  role="img" viewBox="0 0 24 24" class="icon big">{{googleplay-icon.svg}}</svg>{:/} |
 | [Download on Google Play](https://play.google.com/store/apps/details?id=com.maoux.stoptherain){:target="_blank"} |
+
+## Legal
+
+[Privacy policy](/projects/stoptherain/stoptherain-privacy)
+
+[Terms & conditions](/projects/stoptherain/stoptherain-terms)

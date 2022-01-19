@@ -3,7 +3,7 @@ title: Tournesol
 date: 03/07/2018
 img_url: /assets/img/projects/tournesol/
 icons: [android, angular, azure]
-skills: [Android, Angular, .Net, Azure, Kotlin, TypeScript, RxJava, Azure Devops,  Git]
+skills: [Android, Angular, .Net, Azure, Kotlin, TypeScript, Rx[Java], Azure Devops,  Git]
 display: true
 ---
 
@@ -15,7 +15,7 @@ Why I choose tournesol name? I'm sur you don't care 😈
 
 - Create/Join/Share an event
 - Create new item to bring
-- Assign an item to yourseld or to other participant
+- Assign an item to yourself or to other participant
 - Receive notification when the events items were updated
 - No registration needed !
 
@@ -57,4 +57,10 @@ Build with .Net Core Rest Api. Hosted with Microsoft Azure.
 
 The server main goal is to synchronize events created and edited on the differents platformes. All modifications ar timestamped, and when a synchronization occurs, the last one is right. 
 
-It also send notification to user if they are concerned (only on Android). Because the app don't have registration, the notification id is used to reconize users.      
+It also send notification to user if they are concerned (only on Android). Because the app don't have registration, the notification id is used to reconize users.
+
+## Legal
+
+[Privacy policy](/projects/tournesol/tournesol-privacy)
+
+[Terms & conditions](/projects/tournesol/tournesol-terms)
