@@ -1,6 +1,7 @@
 # Maoux Web
 
 ## Icons
+
 Brand icon come from [Simple Icons](https://simpleicons.org/)
 
 ## Build

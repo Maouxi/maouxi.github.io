@@ -24,9 +24,7 @@
   link: https://dotnet.microsoft.com/
 - name: ASP.Net
   category: framework
-  fav: true
   stars: 4
-  display: true
   link: https://dotnet.microsoft.com/apps/aspnet
 - name: UWP
   category: framework
@@ -36,12 +34,13 @@
 - name: Flutter
   category: framework
   stars: 4
+  fav: true
   display: true
   link: https://flutter.dev/
 - name: Angular
   category: framework
   stars: 4
-  display: true
+  display: false
   link: https://angular.io/
 - name: Reactjs
   category: framework
@@ -63,7 +62,7 @@
   stars: 3
   display: true
   link: https://jekyllrb.com/
-- name: Rx[Java]
+- name: RxJava
   category: framework
   stars: 3
   display: true
@@ -95,6 +94,7 @@
 - name: Dart
   category: language
   stars: 4
+  fav: true
   display: true
 - name: HTML - CSS
   category: language
@@ -122,7 +122,7 @@
 - name: SVN
   category: tools
   stars: 3  
-  display: true
+  display: false
 - name: Azure Devops
   category: tools
   fav: true
@@ -197,6 +197,9 @@
   category: architecture
   display: true
 - name: Dependency Injection
+  category: architecture
+  display: true
+- name: Clean Architecture
   category: architecture
   display: true
 

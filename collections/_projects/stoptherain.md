@@ -13,7 +13,7 @@ Stop the rain with only one button to push! Why?! Just to give a try on the Flut
 - Adjust how sensible you are to the rain
 - If raining predict in how many time it will stopped (with 1 second prediction!)
 - If no raining predict how many time is going to stay sunny
-- Oh you have one prediction credit by hours. To get more you have to watch an ads 💩 
+- Oh you have one prediction credit by hours. To get more you have to watch an ads 💩
 
 ## Screenshots
 

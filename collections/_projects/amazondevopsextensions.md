@@ -20,7 +20,7 @@ Tasks for Amazon AppStore submission api and make continuous delivery on Azure D
 
 ## Still in development
 
-The edit task need to be improved by allow reading in metadata files. 
+The edit task need to be improved by allow reading in metadata files.
 
 ## Screenshot
 
