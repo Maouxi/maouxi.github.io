@@ -13,7 +13,7 @@
 - name: Firebase
   category: framework
   fav: true
-  stars: 4
+  stars: 5
   display: true
   link: https://firebase.google.com/
 - name: .Net
@@ -33,7 +33,7 @@
   link: https://docs.microsoft.com/en-Us/windows/uwp/
 - name: Flutter
   category: framework
-  stars: 4
+  stars: 5
   fav: true
   display: true
   link: https://flutter.dev/
@@ -93,7 +93,7 @@
   display: true
 - name: Dart
   category: language
-  stars: 4
+  stars: 5
   fav: true
   display: true
 - name: HTML - CSS
@@ -121,7 +121,7 @@
   link: https://git-scm.com/
 - name: SVN
   category: tools
-  stars: 3  
+  stars: 3
   display: false
 - name: Azure Devops
   category: tools
@@ -131,7 +131,7 @@
   link: https://azure.microsoft.com/en-us/services/devops/
 - name: Firebase
   category: tools
-  stars: 3
+  stars: 5
   display: true
   link: https://firebase.google.com/
 - name: Jenkins

@@ -7,7 +7,7 @@ description: Maxence Raoux website. Android & .Net developer. Discover my skills
         <img src="/assets/img/profil.jfif" class="avatar" />
         <div class="home-header-content">
             <h1>Maxence Raoux - <span id="myage">-</span> ans</h1>
-            <p>Android & .Net developer</p>
+            <p>Flutter, Android/iOS & .Net developer</p>
             <div class="home-header-tags">
                 {% assign favorite_skills = site.data.skills | where: "fav", "true" %}
                 {% for skill in favorite_skills %}
@@ -50,7 +50,8 @@ description: Maxence Raoux website. Android & .Net developer. Discover my skills
                 </span>
                 {% endif %}
             </h3>
-            {% if skill.link %} </a> {% endif %}
+            {% if skill.link %}
+        </a> {% endif %}
         {% endfor %}
     </div>
     {% endfor %}
