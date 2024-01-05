@@ -6,10 +6,10 @@ Brand icon come from [Simple Icons](https://simpleicons.org/)
 
 ## Build
 
-Install gem dependecies: ``bundle``
+Install gem dependecies: `bundle`
 
-Build web site: ``jekyll build``
+Build web site: `jekyll build`
 
 ## Run and debug
 
-Auto-build with web site serving: ``jekyll serve``
+Auto-build with web site serving: `jekyll serve`
