@@ -4,7 +4,7 @@ date: 03/07/2018
 img_url: /assets/img/projects/tournesol-legacy/
 icons: [android, angular, azure]
 skills: [Android, Angular, .Net, Azure, Kotlin, TypeScript, Azure Devops,  Git]
-display: true
+display: false
 ---
 
 The tournesol application allow people to define who brings what to an event.

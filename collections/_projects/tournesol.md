@@ -4,7 +4,7 @@ date: 05/01/2024
 img_url: /assets/img/projects/tournesol/
 icons: [flutter, firebase]
 skills: [Flutter, Firebase, Dart, Azure Devops, Git]
-display: false
+display: true
 ---
 
 The tournesol application allow people to define who brings what to an event.
