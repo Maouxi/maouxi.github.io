@@ -9,18 +9,19 @@ display: true
 
 Simplify event planning by sharing the packing list. No more stress about what is missing or what you absolutely must have!
 
-|  |  |  |  |  |
-| :-: | :-: | :-: | :-: | :-: |
-| ![Tournesol - Home]({{page.img_url}}screenshot1.png) | ![Tournesol - Event]({{page.img_url}}screenshot2.png) | ![Tournesol - Event item]({{page.img_url}}screenshot3.png) | ![Tournesol - Recipe]({{page.img_url}}screenshot4.png)
+|                                                      |                                                       |                                                            |                                                        |
+| :--------------------------------------------------: | :---------------------------------------------------: | :--------------------------------------------------------: | :----------------------------------------------------: |
+| ![Tournesol - Home]({{page.img_url}}screenshot1.png) | ![Tournesol - Event]({{page.img_url}}screenshot2.png) | ![Tournesol - Event item]({{page.img_url}}screenshot3.png) | ![Tournesol - Recipe]({{page.img_url}}screenshot4.png) |
 
 {::nomarkdown}
 {% assign googleplay-icon = site.data.icons | where_exp: "i", "i.tag == 'googleplay'" | first %}
 {% assign appstore-icon = site.data.icons | where_exp: "i", "i.tag == 'appstore'" | first %}
+{% assign web-icon = site.data.icons | where_exp: "i", "i.tag == 'web'" | first %}
 {:/}
 
-| {::nomarkdown}<svg  role="img" viewBox="0 0 24 24" class="icon big">{{googleplay-icon.svg}}</svg>{:/} | {::nomarkdown}<svg role="img" viewBox="0 0 24 24" class="icon big">{{appstore-icon.svg}}</svg>{:/} |
-| :-: | :-: |
-| [Download on Google Play](https://play.google.com/store/apps/details?id=com.maoux.tournesol){:target="_blank"} | [Download on AppStore](https://testflight.apple.com/join/zL4BJxt8){:target="_blank"} |
+|     {::nomarkdown}<svg  role="img" viewBox="0 0 24 24" class="icon big">{{googleplay-icon.svg}}</svg>{:/}      | {::nomarkdown}<svg role="img" viewBox="0 0 24 24" class="icon big">{{appstore-icon.svg}}</svg>{:/} | {::nomarkdown}<svg role="img" viewBox="0 0 24 24" class="icon big">{{web-icon.svg}}</svg>{:/} |
+| :------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------: |
+| [Download on Google Play](https://play.google.com/store/apps/details?id=com.maoux.tournesol){:target="_blank"} | [Download on AppStore](https://apps.apple.com/us/app/my-tournesol/id6475875443){:target="_blank"}  |                  [Web app](https://tournesol-app.web.app/){:target="_blank"}                  |
 
 ## Description
 
