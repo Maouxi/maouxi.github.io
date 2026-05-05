@@ -1,5 +1,6 @@
 :root {
     --background-color: #f5f2ee;
+    --background-rgb: 245, 242, 238;
     --surface-color: #ffffff;
     --shadow: rgba(0, 0, 0, 0.06);
     --border-color: rgba(0, 0, 0, 0.09);
@@ -14,6 +15,7 @@
 
 body[data-theme="dark"] {
     --background-color: #0a0a0a;
+    --background-rgb: 10, 10, 10;
     --surface-color: #141414;
     --shadow: rgba(255, 255, 255, 0.04);
     --border-color: rgba(255, 255, 255, 0.08);

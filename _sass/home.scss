@@ -5,15 +5,29 @@
     width: 152px;
     height: 152px;
     object-fit: cover;
-    flex-shrink: 0;
-    border: 3px solid $primary-color;
-    box-shadow: 0 0 0 8px rgba(244, 81, 30, 0.12);
+    display: block;
+    border: 3px solid var(--background-color);
 }
 
 // ─── Hero ─────────────────────────────────────────────────────────────────────
 
 .hp-hero {
     border-bottom: 1px solid $border-color;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -80px;
+        right: -60px;
+        width: 480px;
+        height: 480px;
+        background: radial-gradient(circle, rgba(244, 81, 30, 0.09) 0%, transparent 68%);
+        pointer-events: none;
+        border-radius: 50%;
+        z-index: 0;
+    }
 
     > article {
         display: flex;
@@ -23,6 +37,8 @@
         gap: 48px;
         padding-top: 68px;
         padding-bottom: 68px;
+        position: relative;
+        z-index: 1;
     }
 }
 
@@ -56,7 +72,10 @@
     font-size: 4rem;
     line-height: 1.0;
     letter-spacing: -0.03em;
-    color: $text-primary-color;
+    background: linear-gradient(135deg, var(--text-primary-color) 30%, #f4511e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin-bottom: 20px;
     margin-top: 0;
 }
@@ -72,7 +91,34 @@
     color: $text-primary-light-color;
     line-height: 1.75;
     max-width: 480px;
-    margin-bottom: 28px;
+    margin-bottom: 14px;
+}
+
+.hp-stats {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 0 10px;
+    margin-bottom: 24px;
+}
+
+.hp-stat {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: $text-primary-light-color;
+    letter-spacing: 0.01em;
+
+    strong {
+        color: $primary-color;
+        font-weight: 700;
+    }
+}
+
+.hp-stat-sep {
+    color: $text-primary-lighter-color;
+    font-size: 12px;
+    font-family: 'IBM Plex Mono', monospace;
+    user-select: none;
 }
 
 .hp-cta {
@@ -85,8 +131,8 @@
 .hp-btn {
     display: inline-flex;
     align-items: center;
-    padding: 10px 20px;
-    border-radius: 8px;
+    padding: 10px 22px;
+    border-radius: 100px;
     font-size: 14px;
     font-weight: 600;
     font-family: 'IBM Plex Sans', sans-serif;
@@ -156,6 +202,27 @@
 
 .hp-hero-photo {
     flex-shrink: 0;
+    padding: 3px;
+    background: linear-gradient(135deg, #f4511e 0%, #ff8c42 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 0 8px rgba(244, 81, 30, 0.12);
+    display: inline-flex;
+}
+
+.hp-noise {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.07;
+    pointer-events: none;
+    z-index: 0;
+    mix-blend-mode: multiply;
+}
+
+body[data-theme="dark"] .hp-noise {
+    mix-blend-mode: overlay;
+    opacity: 0.06;
 }
 
 // ─── Section shell ────────────────────────────────────────────────────────────
@@ -188,6 +255,8 @@
     text-transform: uppercase;
     font-family: 'IBM Plex Mono', monospace;
     margin: 0;
+    border-left: 3px solid $primary-color;
+    padding-left: 10px;
 }
 
 .hp-view-all {
@@ -484,6 +553,23 @@
         display: flex;
         flex-flow: row wrap;
     }
+}
+
+// ─── Hero entrance animation ─────────────────────────────────────────────────
+
+@keyframes hero-in {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .hp-role-label { animation: hero-in 0.5s ease both; }
+    .hp-name       { animation: hero-in 0.55s ease both; animation-delay: 90ms; }
+    .hp-bio        { animation: hero-in 0.5s ease both;  animation-delay: 190ms; }
+    .hp-stats      { animation: hero-in 0.5s ease both;  animation-delay: 260ms; }
+    .hp-cta        { animation: hero-in 0.5s ease both;  animation-delay: 340ms; }
+    .hp-social     { animation: hero-in 0.5s ease both;  animation-delay: 410ms; }
+    .hp-hero-photo { animation: hero-in 0.6s ease both;  animation-delay: 70ms; }
 }
 
 // ─── Level indicators (kept for reuse) ───────────────────────────────────────

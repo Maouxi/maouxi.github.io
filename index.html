@@ -4,11 +4,25 @@ description: Maxence Raoux — Flutter, Android, iOS & .Net developer. Discover 
 ---
 
 <div class="hp-hero">
+    <svg class="hp-noise" aria-hidden="true" focusable="false">
+        <filter id="hp-noise-filter">
+            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#hp-noise-filter)" />
+    </svg>
     <article>
         <div class="hp-hero-text">
             <p class="hp-role-label">Flutter &middot; Android &middot; iOS &middot; .Net</p>
             <h1 class="hp-name">Maxence<br>Raoux</h1>
-            <p class="hp-bio">Tech Lead Flutter at Renault Digital &amp; Freelance developer. 10+ years shipping mobile apps — from consumer apps to medical devices and automotive platforms. Based in Grenoble, France.</p>
+            <p class="hp-bio">Tech Lead Flutter at Renault Digital &amp; Freelance developer. 10+ years shipping mobile
+                apps — from consumer apps to medical devices and automotive platforms. Based in Grenoble, France.</p>
+            <div class="hp-stats">
+                <span class="hp-stat"><strong>10+</strong> years</span>
+                <span class="hp-stat-sep">·</span>
+                <span class="hp-stat"><strong>4</strong> platforms</span>
+                <span class="hp-stat-sep">·</span>
+                <span class="hp-stat"><strong>Flutter</strong> Tech Lead & Freelance</span>
+            </div>
             <div class="hp-cta">
                 <a href="/projects.html" class="hp-btn hp-btn-primary">View Projects</a>
                 <a href="/blog.html" class="hp-btn hp-btn-secondary">Read Blog</a>
@@ -29,12 +43,12 @@ description: Maxence Raoux — Flutter, Android, iOS & .Net developer. Discover 
 
 <div class="hp-section">
     <article>
-        <div class="hp-section-header">
+        <div class="hp-section-header reveal">
             <h2 class="hp-section-title">Experience</h2>
         </div>
         <div class="hp-experience">
             {% for job in site.data.experience %}
-            <div class="hp-exp-item">
+            <div class="hp-exp-item reveal" style="--i:{{ forloop.index0 }}">
                 <p class="hp-exp-role">{{ job.role }}</p>
                 {% if job.description %}
                 <p class="hp-exp-desc">{{ job.description }}</p>
@@ -43,7 +57,8 @@ description: Maxence Raoux — Flutter, Android, iOS & .Net developer. Discover 
                 <div class="hp-exp-skills">
                     {% for s in job.skills %}
                     {% assign skill = site.data.skills | where: "name", s | first %}
-                    <span class="tag-small {% if skill %}{{ skill.category }}{% else %}tools{% endif %} light">{{ s }}</span>
+                    <span class="tag-small {% if skill %}{{ skill.category }}{% else %}tools{% endif %} light">{{ s
+                        }}</span>
                     {% endfor %}
                 </div>
                 {% endif %}
@@ -55,12 +70,12 @@ description: Maxence Raoux — Flutter, Android, iOS & .Net developer. Discover 
 
 <div class="hp-section">
     <article>
-        <div class="hp-section-header">
+        <div class="hp-section-header reveal">
             <h2 class="hp-section-title">Education</h2>
         </div>
         <div class="hp-education">
             {% for edu in site.data.education %}
-            <div class="hp-edu-item">
+            <div class="hp-edu-item reveal" style="--i:{{ forloop.index0 }}">
                 <div class="hp-edu-left">
                     <span class="hp-exp-dates">{{ edu.start }} &ndash; {{ edu.end }}</span>
                 </div>
@@ -76,14 +91,14 @@ description: Maxence Raoux — Flutter, Android, iOS & .Net developer. Discover 
 
 <div class="hp-section hp-section-alt">
     <article>
-        <div class="hp-section-header">
+        <div class="hp-section-header reveal">
             <h2 class="hp-section-title">Projects</h2>
             <a href="/projects.html" class="hp-view-all">View all &rarr;</a>
         </div>
         <div class="hp-grid">
             {% assign recent_projects = site.projects | where: "display", true | sort: "date" | reverse %}
             {% for project in recent_projects limit:3 %}
-            <div class="hp-card">
+            <div class="hp-card reveal" style="--i:{{ forloop.index0 }}">
                 <div class="hp-card-icons">
                     {% for iconname in project.icons %}
                     {% include icon.html ic=iconname %}
@@ -94,7 +109,8 @@ description: Maxence Raoux — Flutter, Android, iOS & .Net developer. Discover 
                 <div class="hp-card-tags">
                     {% for s in project.skills %}
                     {% assign skill = site.data.skills | where: "name", s | first %}
-                    <span class="tag-small {% if skill %}{{ skill.category }}{% else %}tools{% endif %} light">{{ s }}</span>
+                    <span class="tag-small {% if skill %}{{ skill.category }}{% else %}tools{% endif %} light">{{ s
+                        }}</span>
                     {% endfor %}
                 </div>
             </div>
@@ -106,20 +122,21 @@ description: Maxence Raoux — Flutter, Android, iOS & .Net developer. Discover 
 {% if site.posts.size > 0 %}
 <div class="hp-section">
     <article>
-        <div class="hp-section-header">
+        <div class="hp-section-header reveal">
             <h2 class="hp-section-title">Latest Posts</h2>
             <a href="/blog.html" class="hp-view-all">View all &rarr;</a>
         </div>
         <div class="hp-posts">
             {% for post in site.posts limit:3 %}
-            <div class="hp-post-card">
+            <div class="hp-post-card reveal" style="--i:{{ forloop.index0 }}">
                 <span class="hp-post-date">{{ post.date | date: "%b %Y" }}</span>
                 <p class="hp-post-title"><a href="{{ post.url }}">{{ post.title }}</a></p>
                 <p class="hp-post-excerpt">{{ post.excerpt | strip_html | truncate: 130 }}</p>
                 <div class="hp-card-tags">
                     {% for s in post.skills %}
                     {% assign skill = site.data.skills | where: "name", s | first %}
-                    <span class="tag-small {% if skill %}{{ skill.category }}{% else %}tools{% endif %} light">{{ s }}</span>
+                    <span class="tag-small {% if skill %}{{ skill.category }}{% else %}tools{% endif %} light">{{ s
+                        }}</span>
                     {% endfor %}
                 </div>
             </div>
@@ -131,13 +148,13 @@ description: Maxence Raoux — Flutter, Android, iOS & .Net developer. Discover 
 
 <div class="hp-section hp-section-alt">
     <article>
-        <div class="hp-section-header">
+        <div class="hp-section-header reveal">
             <h2 class="hp-section-title">Skills</h2>
         </div>
         <div class="hp-skills-grid">
             {% assign grouped_skills = site.data.skills | where: "display", true | group_by: "category" %}
             {% for skill_group in grouped_skills %}
-            <div class="hp-skill-group">
+            <div class="hp-skill-group reveal" style="--i:{{ forloop.index0 }}">
                 {% assign category = site.data.skill-categories | where: "name", skill_group.name %}
                 <p class="hp-skill-label">{{ category.first.label }}</p>
                 <div class="hp-skill-tags">
