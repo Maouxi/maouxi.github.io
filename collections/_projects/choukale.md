@@ -1,6 +1,6 @@
 ---
 title: Choukale
-date: 05/01/2024
+date: 16/12/2024
 img_url: /assets/img/projects/choukale/
 icons: [flutter, firebase]
 skills: [Flutter, Firebase, Dart, Azure Devops, Git]

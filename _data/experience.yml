@@ -1,0 +1,15 @@
+- role: Freelance
+  description: End-to-end mobile projects — TA Nutrition (dietetic app for companies), Billetweb (event apps with offline mode and QR scan), Nearby (co-founder). From development to store submission.
+  skills: [Flutter, Dart, Firebase, Git]
+
+- role: Flutter Developer
+  description: Tech Lead at Renault Digital building iOS & Android apps — mapping with background geofencing, design system library for Renault, Alpine and Mobilize brands, charts library. Internal training on architecture, packages and testing.
+  skills: [Flutter, Dart, Firebase, Git]
+
+- role: Android Developer
+  description: 8+ years of native Android across healthcare (UroMems, Guerbet, Kayentis), telecoms (SFR, Three Ireland), retail (Carrefour Banque, Photoweb) and IoT (Nexans, Hager). Tech lead, clean architecture and CI/CD setup.
+  skills: [Android, Kotlin, Java, MVVM, Git]
+
+- role: .Net & Azure Developer
+  description: Azure IoT architectures, REST APIs and DevOps pipelines for Nexans, BOOSTHEAT, Carrefour and others. Designing cloud-connected systems, ERP/CRM integrations and backend services.
+  skills: [.Net, C#, Azure, Azure Devops]

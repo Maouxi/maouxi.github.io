@@ -13,15 +13,18 @@ Riverpod good practices
   - [Providers usage](#providers-usage)
   - [Default behavior](#default-behavior)
 - [Keep it simple](#keep-it-simple)
+- [Tips](#tips)
+  - [Use `ref.select` to limit rebuilds](#use-refselect-to-limit-rebuilds)
+  - [React without rebuilding — `ref.listen`](#react-without-rebuilding--reflisten)
+- [Common mistakes](#common-mistakes)
+  - [Ref lifecycle](#ref-lifecycle)
+- [Do not bypass the build method of providers](#do-not-bypass-the-build-method-of-providers)
 - [Doing it well](#doing-it-well)
   - [Do not re-invent the wheel](#do-not-re-invent-the-wheel)
   - [One provider, one state](#one-provider-one-state)
   - [Keep alive or not keep alive?](#keep-alive-or-not-keep-alive)
   - [Don't be shy with families](#dont-be-shy-with-families)
   - [I need to reset my whole state](#i-need-to-reset-my-whole-state)
-- [Tips](#tips)
-  - [Use `ref.select` to limit rebuilds](#use-refselect-to-limit-rebuilds)
-  - [React without rebuilding — `ref.listen`](#react-without-rebuilding--reflisten)
 
 Riverpod is state management first, not a DI system. You can use it for DI but always remember it's not designed for DI but for state management.
 
@@ -128,6 +131,150 @@ I really don't need a provider and Riverpod here, I have a local state, that inc
 Hook is just syntactic sugar to avoid the `StatefulWidget` and `useState` from the Flutter SDK.
 
 Riverpod becomes very useful when we need to share state between screens/widgets. A user, a cart, user vehicles...
+
+
+## Tips
+
+### Use `ref.select` to limit rebuilds
+
+When a widget only needs one field of a larger provider, `ref.watch` on the whole object causes it to rebuild on every unrelated change.
+
+```dart
+// rebuilds on any User change (avatar, email, preferences...)
+final name = ref.watch(userProvider).name;
+
+// rebuilds only when name changes
+final name = ref.watch(userProvider.select((u) => u.name));
+```
+
+This works for any provider type, including async ones:
+
+```dart
+final isAdmin = ref.watch(userProvider.select((u) => u.isAdmin));
+```
+
+__⚠️ The selector must return a value that is comparable with `==`. If it returns a new object each time (like a list copy), the optimization does nothing.__
+
+### React without rebuilding — `ref.listen`
+
+`ref.listen` is the right tool when you need to react to a state change but don't want to trigger a rebuild: SnackBars, navigation, dialogs.
+
+But you can also use inside providers, `ref.listen` drives side effects when another provider changes — for example, clearing a search query when filters changes:
+
+```dart
+@riverpod
+class Query extends _$Query {
+  @override
+  String build() {
+    ref.listen(filtersProvider, (_, __) {
+       if(!ref.mounted) return;
+       state = "";
+    });
+    return "";
+  }
+
+  void set(String query) => state = query;
+}
+```
+
+## Common mistakes
+
+### Ref lifecycle
+
+Ref has a lifecycle, it can be disposed. If you have async gap always verify your ref still exist !
+
+In a Provider:
+
+```dart
+@riverpod
+class CountNotifier extends _$CountNotifier {
+  @override
+  int build() => 0;
+
+  Future<void> incrementDelayed() async {
+    await Future<void>.delayed(const Duration(seconds: 1));
+    // Async gap here validate you ref was not rebuild
+    if(!ref.mounted) return; 
+    state += 1;
+  }
+```
+
+In a widget:
+
+```dart
+class HomeConsumerState extends ConsumerWidget {
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    return Button(
+      onTap:  (value) async {
+        await ref.read<myUseCaseProvider>().execute();
+        if (mounted) {
+          ref.read(analyticsProvider).logButtonTap();
+        }
+      },
+    );
+  }
+}
+```
+
+> You can add callback when a provider dispo with `ref.onDispose(() {})`.
+
+## Do not bypass the build method of providers
+
+Never init a provider in its constructor. Everything goes to the build override. If you need async, return a Future.
+
+```dart
+@riverpod
+class Counter extends _$Counter {
+  Counter() { initializeCounter(); }
+
+  Future<void> initializeCounter() async {
+    var res = await someBackgroundWork();
+    if(res.mounted) state = res;
+  }
+
+  @override
+  int build() => state;
+}
+```
+
+if `someBackgroundWork` finish its execution before the build method is called, the state will be never initialized because res.mounted will return false. Without res.mounted it will cause an exception.
+
+Not better with this quick fix:
+
+```dart
+@riverpod
+class Counter extends _$Counter {
+  Counter() { initializeCounter(); }
+
+  Future<void> initializeCounter() async {
+    var res = await someBackgroundWork();
+    if(res.mounted) state = res;
+  }
+
+  @override
+  int build() { 
+    initializeCounter();
+    return 0;
+  }
+}
+```
+
+If very bad luck, the initialzeCounter can end before the state is init. Also the initializeCounter run without async like if it can be ignored by the build method.
+
+Correct version will be:
+
+```dart
+@riverpod
+class Counter extends _$Counter {
+
+  @override
+  Future<int> build() async {
+    var res = await someBackgroundWork();
+    return res;
+  };
+}
+```
 
 ## Doing it well
 
@@ -344,7 +491,7 @@ class Query extends _$Query {
       Future.delayed(const Duration(milliseconds: 500), () => query),
     );
     final result = await _pending!.valueOrCancellation();
-    if (result != null) {
+    if (result != null && ref.mounted) {
       state = AsyncData(result);
     }
   }
@@ -486,44 +633,3 @@ Future<String?> userUid(Ref ref) async {
 When the auth state changes, the userUid is "reset" and returns values always in line with the current app state.
 
 [source riverpod.dev](https://riverpod.dev/docs/root/faq#is-there-a-way-to-reset-all-providers-at-once)
-
-## Tips
-
-### Use `ref.select` to limit rebuilds
-
-When a widget only needs one field of a larger provider, `ref.watch` on the whole object causes it to rebuild on every unrelated change.
-
-```dart
-// rebuilds on any User change (avatar, email, preferences...)
-final name = ref.watch(userProvider).name;
-
-// rebuilds only when name changes
-final name = ref.watch(userProvider.select((u) => u.name));
-```
-
-This works for any provider type, including async ones:
-
-```dart
-final isAdmin = ref.watch(userProvider.select((u) => u.isAdmin));
-```
-
-__⚠️ The selector must return a value that is comparable with `==`. If it returns a new object each time (like a list copy), the optimization does nothing.__
-
-### React without rebuilding — `ref.listen`
-
-`ref.listen` is the right tool when you need to react to a state change but don't want to trigger a rebuild: SnackBars, navigation, dialogs.
-
-But you can also use inside providers, `ref.listen` drives side effects when another provider changes — for example, clearing a search query when filters changes:
-
-```dart
-@riverpod
-class Query extends _$Query {
-  @override
-  String build() {
-    ref.listen(filtersProvider, (_, __) => state = "");
-    return "";
-  }
-
-  void set(String query) => state = query;
-}
-```

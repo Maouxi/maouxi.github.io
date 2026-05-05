@@ -1,62 +1,152 @@
 ---
 title: Home
-description: Maxence Raoux website. Android & .Net developer. Discover my skills, projects and blog.
+description: Maxence Raoux — Flutter, Android, iOS & .Net developer. Discover my projects and articles.
 ---
-<div class="home-header">
-    <article class="content">
-        <img src="/assets/img/profil.jfif" class="avatar" title="maxence profile picture" />
-        <div class="home-header-content">
-            <h1>Maxence Raoux - <span id="myage">-</span> ans</h1>
-            <p>Flutter, Android/iOS & .Net developer</p>
-            <div class="home-header-tags">
-                {% assign favorite_skills = site.data.skills | where: "fav", "true" %}
-                {% for skill in favorite_skills %}
-                <span class="tag {{ skill.category }}">{{ skill.name }}</span>
-                {% endfor %}
+
+<div class="hp-hero">
+    <article>
+        <div class="hp-hero-text">
+            <p class="hp-role-label">Flutter &middot; Android &middot; iOS &middot; .Net</p>
+            <h1 class="hp-name">Maxence<br>Raoux</h1>
+            <p class="hp-bio">Tech Lead Flutter at Renault Digital &amp; Freelance developer. 10+ years shipping mobile apps — from consumer apps to medical devices and automotive platforms. Based in Grenoble, France.</p>
+            <div class="hp-cta">
+                <a href="/projects.html" class="hp-btn hp-btn-primary">View Projects</a>
+                <a href="/blog.html" class="hp-btn hp-btn-secondary">Read Blog</a>
             </div>
-            <div class="home-header-link">
+            <div class="hp-social">
                 {% for item in site.data.social-link %}
-                <a href="{{ item.link }}" target="_blank">
+                <a href="{{ item.link }}" target="_blank" title="{{ item.name }}">
                     {% include icon.html ic=item.icon %}
                 </a>
                 {% endfor %}
             </div>
         </div>
+        <div class="hp-hero-photo">
+            <img src="/assets/img/profil.jfif" class="avatar" alt="Maxence Raoux" />
+        </div>
     </article>
 </div>
-<article class="content skill-container">
-    {% assign grouped_skills = site.data.skills | where: "display", true | group_by: "category" %}
 
-    {% for skill_group in grouped_skills %}
-    <div class='skill-item'>
-        {% assign category = site.data.skill-categories | where: "name", skill_group.name %}
-        {% assign sorted_skills = skill_group.items | sort: "stars" | reverse %}
-        <h2>{{ category.first.label }}</h2>
-        {% for skill in sorted_skills %}
-        {% if skill.link %} <a href="{{ skill.link }}" target="_blank"> {% endif %}
-            <h3>
-                {{ skill.name }}
-                {% if skill.link %}
-                {% include icon.html ic="link" %}
+<div class="hp-section">
+    <article>
+        <div class="hp-section-header">
+            <h2 class="hp-section-title">Experience</h2>
+        </div>
+        <div class="hp-experience">
+            {% for job in site.data.experience %}
+            <div class="hp-exp-item">
+                <p class="hp-exp-role">{{ job.role }}</p>
+                {% if job.description %}
+                <p class="hp-exp-desc">{{ job.description }}</p>
                 {% endif %}
-                {% if skill.stars > 0 %}
-                <span class="lvl">
-                    {% for i in (skill.stars..4) %}
-                    <span class="lvl-empty"></span>
+                {% if job.skills %}
+                <div class="hp-exp-skills">
+                    {% for s in job.skills %}
+                    {% assign skill = site.data.skills | where: "name", s | first %}
+                    <span class="tag-small {% if skill %}{{ skill.category }}{% else %}tools{% endif %} light">{{ s }}</span>
                     {% endfor %}
-                    {% for i in (1..skill.stars) %}
-                    <span class="lvl-fill {{ skill_group.name }}"></span>
-                    {% endfor %}
-                </span>
+                </div>
                 {% endif %}
-            </h3>
-            {% if skill.link %}
-        </a> {% endif %}
-        {% endfor %}
-    </div>
-    {% endfor %}
-</article>
+            </div>
+            {% endfor %}
+        </div>
+    </article>
+</div>
 
-<script>
-    document.querySelector('#myage').innerHTML = Math.abs(new Date(Date.now() - new Date(1990, 4, 12).getTime()).getUTCFullYear() - 1970);
-</script>
+<div class="hp-section">
+    <article>
+        <div class="hp-section-header">
+            <h2 class="hp-section-title">Education</h2>
+        </div>
+        <div class="hp-education">
+            {% for edu in site.data.education %}
+            <div class="hp-edu-item">
+                <div class="hp-edu-left">
+                    <span class="hp-exp-dates">{{ edu.start }} &ndash; {{ edu.end }}</span>
+                </div>
+                <div class="hp-edu-right">
+                    <p class="hp-exp-role">{{ edu.degree }}</p>
+                    <p class="hp-exp-company">{{ edu.school }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </article>
+</div>
+
+<div class="hp-section hp-section-alt">
+    <article>
+        <div class="hp-section-header">
+            <h2 class="hp-section-title">Projects</h2>
+            <a href="/projects.html" class="hp-view-all">View all &rarr;</a>
+        </div>
+        <div class="hp-grid">
+            {% assign recent_projects = site.projects | where: "display", true | sort: "date" | reverse %}
+            {% for project in recent_projects limit:3 %}
+            <div class="hp-card">
+                <div class="hp-card-icons">
+                    {% for iconname in project.icons %}
+                    {% include icon.html ic=iconname %}
+                    {% endfor %}
+                </div>
+                <p class="hp-card-title"><a href="{{ project.url }}">{{ project.title }}</a></p>
+                <p class="hp-card-excerpt">{{ project.excerpt | strip_html | truncate: 110 }}</p>
+                <div class="hp-card-tags">
+                    {% for s in project.skills %}
+                    {% assign skill = site.data.skills | where: "name", s | first %}
+                    <span class="tag-small {% if skill %}{{ skill.category }}{% else %}tools{% endif %} light">{{ s }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </article>
+</div>
+
+{% if site.posts.size > 0 %}
+<div class="hp-section">
+    <article>
+        <div class="hp-section-header">
+            <h2 class="hp-section-title">Latest Posts</h2>
+            <a href="/blog.html" class="hp-view-all">View all &rarr;</a>
+        </div>
+        <div class="hp-posts">
+            {% for post in site.posts limit:3 %}
+            <div class="hp-post-card">
+                <span class="hp-post-date">{{ post.date | date: "%b %Y" }}</span>
+                <p class="hp-post-title"><a href="{{ post.url }}">{{ post.title }}</a></p>
+                <p class="hp-post-excerpt">{{ post.excerpt | strip_html | truncate: 130 }}</p>
+                <div class="hp-card-tags">
+                    {% for s in post.skills %}
+                    {% assign skill = site.data.skills | where: "name", s | first %}
+                    <span class="tag-small {% if skill %}{{ skill.category }}{% else %}tools{% endif %} light">{{ s }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </article>
+</div>
+{% endif %}
+
+<div class="hp-section hp-section-alt">
+    <article>
+        <div class="hp-section-header">
+            <h2 class="hp-section-title">Skills</h2>
+        </div>
+        <div class="hp-skills-grid">
+            {% assign grouped_skills = site.data.skills | where: "display", true | group_by: "category" %}
+            {% for skill_group in grouped_skills %}
+            <div class="hp-skill-group">
+                {% assign category = site.data.skill-categories | where: "name", skill_group.name %}
+                <p class="hp-skill-label">{{ category.first.label }}</p>
+                <div class="hp-skill-tags">
+                    {% for skill in skill_group.items %}
+                    <span class="tag-small {{ skill_group.name }} light">{{ skill.name }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </article>
+</div>

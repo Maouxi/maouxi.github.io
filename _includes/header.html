@@ -1,18 +1,22 @@
 <header id="navigation">
-    <h1><a href="/">Maoux</a></h1>
-    <nav>
-        {% for item in site.data.navigation %}
+    <div class="nav-inner">
+        <div class="nav-logo">
+            <h1><a href="/">Maouxi</a></h1>
+        </div>
+        <nav>
+            {% for item in site.data.navigation %}
 
-        <a href="{{ item.link }}" {% if page.url == item.link %}class="current"
-            {% elsif page.url contains item.tag %}class="current" {% endif %}>
-            {{ item.name }}
+            <a href="{{ item.link }}" {% if page.url == item.link %}class="current"
+                {% elsif page.url contains item.tag %}class="current" {% endif %}>
+                {{ item.name }}
+            </a>
+
+            {% endfor %}
+        </nav>
+        <a id="themeSwitch">
+            {% include icon.html ic="darklight" %}
         </a>
-
-        {% endfor %}
-    </nav>
-    <a id="themeSwitch">
-        {% include icon.html ic="darklight" %}
-    </a>
+    </div>
 
     <script>
         setDarkTheme(localStorage.isDark == "true")

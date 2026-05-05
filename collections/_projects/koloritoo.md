@@ -1,6 +1,6 @@
 ---
 title: Koloritoo
-date: 05/01/2024
+date: 05/05/2026
 img_url: /assets/img/projects/koloritoo/
 icons: [flutter, firebase]
 skills: [Flutter, Firebase, Dart, Git]
@@ -12,6 +12,8 @@ AI Coloring Pages from Photos
 Koloritoo transforms your favorite photos into beautiful, printable coloring pages — powered by AI, ready in seconds.
 
 Whether it's a family portrait, a beloved pet, a stunning landscape, or a fun snapshot, just upload your photo and let Koloritoo do the magic. In a few seconds, you'll have a clean, high-quality black-and-white coloring page ready to print and enjoy.
+
+[Landing page](https://koloritoo.firebaseapp.com/)
 
 ## HOW IT WORKS
 

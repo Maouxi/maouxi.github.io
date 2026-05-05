@@ -1,155 +1,507 @@
+// ─── Avatar ──────────────────────────────────────────────────────────────────
+
 .avatar {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 152px;
+    height: 152px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 3px solid $primary-color;
+    box-shadow: 0 0 0 8px rgba(244, 81, 30, 0.12);
 }
 
-@media (min-width: 800px) {
-    .home-header {
-        article {
-            flex-flow: row nowrap;
-            align-items: center;
-            min-height: 250px;
-            .home-header-content {
-                align-items: flex-start;
-                margin-left: 20px;
-                .home-header-tags {
-                    justify-content: flex-start;
-                }
-            }
-        }
-    }
-}
-@media (max-width: 800px) {
-    .home-header {
-        article {
-            flex-flow: column nowrap;
-            align-items: center;
-            .home-header-content {
-                align-items: center;
-                margin-top: 20px;
-                .home-header-tags {
-                    justify-content: center;
-                }
-            }
-        }
-    }
-}
+// ─── Hero ─────────────────────────────────────────────────────────────────────
 
-.home-header {
-    color: $text-primary-color-invert;
-    box-shadow: 0px 1px 1px $shadow;
-    background-image: url("/assets/img/header.JPG");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.hp-hero {
+    border-bottom: 1px solid $border-color;
 
-    article {
-        background: linear-gradient(90deg, transparent 0%, #00000045 25%, #00000045 75%, transparent 100%);
+    > article {
         display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 48px;
+        padding-top: 68px;
+        padding-bottom: 68px;
+    }
+}
 
-        .home-header-content {
-            display: flex;
-            flex-flow: column nowrap;
-            p {
-                color: $text-primary-light-color-invert;
-                margin-bottom: 15px;
-            }
-            .home-header-tags {
-                display: flex;
-                flex-flow: row wrap;
-            }
-            .home-header-link {
-                flex-flow: row nowrap;
-                margin-top: 18px;
-                a:hover {
-                    background-color: transparent;
-                    svg {
-                        fill: $primary-color;
-                    }
-                }
-                svg {
-                    fill: $text-primary-light-color-invert;
-                    width: 22px;
-                    height: 22px;
-                    margin-right: 10px;
-                }
-            }
+@media (max-width: 800px) {
+    .hp-hero > article {
+        flex-flow: column-reverse nowrap;
+        align-items: flex-start;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        gap: 24px;
+    }
+}
+
+.hp-hero-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.hp-role-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $primary-color;
+    margin-bottom: 16px;
+}
+
+.hp-name {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 1.0;
+    letter-spacing: -0.03em;
+    color: $text-primary-color;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+@media (max-width: 800px) {
+    .hp-name {
+        font-size: 2.8rem;
+    }
+}
+
+.hp-bio {
+    font-size: 15px;
+    color: $text-primary-light-color;
+    line-height: 1.75;
+    max-width: 480px;
+    margin-bottom: 28px;
+}
+
+.hp-cta {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    margin-bottom: 28px;
+}
+
+.hp-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'IBM Plex Sans', sans-serif;
+    transition: transform 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+        background-color: transparent;
+        transform: translateY(-1px);
+    }
+}
+
+.hp-btn-primary {
+    background-color: $primary-color;
+    color: $text-primary-color-invert !important;
+    border: 1px solid $primary-color;
+
+    &:hover {
+        background-color: #e03d0e;
+        border-color: #e03d0e;
+    }
+}
+
+.hp-btn-secondary {
+    background-color: transparent;
+    color: $text-primary-color !important;
+    border: 1px solid $border-color;
+
+    &:hover {
+        border-color: $text-primary-color;
+    }
+}
+
+.hp-social {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 8px;
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        border: 1px solid $border-color;
+        -webkit-tap-highlight-color: transparent;
+        transition: border-color 0.2s ease, transform 0.2s ease;
+
+        &:hover {
+            background-color: transparent;
+            border-color: $primary-color;
+            transform: translateY(-2px);
+
+            svg { fill: $primary-color; }
+        }
+
+        svg {
+            fill: $text-primary-light-color;
+            width: 16px;
+            height: 16px;
+            transition: fill 0.2s ease;
         }
     }
 }
 
-@media (min-width: 800px) {
-    .skill-container {
+.hp-hero-photo {
+    flex-shrink: 0;
+}
+
+// ─── Section shell ────────────────────────────────────────────────────────────
+
+.hp-section {
+    border-bottom: 1px solid $border-color;
+
+    > article {
+        padding-top: 52px;
+        padding-bottom: 52px;
+    }
+}
+
+.hp-section-alt {
+    background-color: $surface-color;
+}
+
+.hp-section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.hp-section-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: $text-primary-color;
+    text-transform: uppercase;
+    font-family: 'IBM Plex Mono', monospace;
+    margin: 0;
+}
+
+.hp-view-all {
+    font-size: 13px;
+    font-family: 'IBM Plex Mono', monospace;
+    color: $primary-color;
+
+    &:hover {
+        background-color: transparent;
+        text-decoration: underline;
+    }
+}
+
+// ─── Experience ───────────────────────────────────────────────────────────────
+
+.hp-experience {
+    display: grid;
+    gap: 12px;
+
+    @media (min-width: 800px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.hp-exp-item {
+    border: 1px solid $border-color;
+    border-radius: 12px;
+    padding: 20px 22px;
+    background-color: $background-color;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+}
+
+.hp-exp-role {
+    font-size: 15px;
+    font-weight: 700;
+    color: $text-primary-color;
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin: 0;
+}
+
+.hp-exp-desc {
+    font-size: 13px;
+    color: $text-primary-light-color;
+    line-height: 1.65;
+    margin: 0;
+    flex: 1;
+}
+
+.hp-exp-skills {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+// ─── Education ────────────────────────────────────────────────────────────────
+
+.hp-education {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1px;
+    border: 1px solid $border-color;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.hp-edu-item {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 24px;
+    padding: 16px 22px;
+    background-color: $background-color;
+    border-bottom: 1px solid $border-color;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    .hp-edu-left {
+        flex-shrink: 0;
+        width: 100px;
+    }
+
+    .hp-edu-right {
+        flex: 1;
+    }
+
+    .hp-exp-role {
+        margin-bottom: 2px;
+    }
+}
+
+@media (max-width: 800px) {
+    .hp-edu-item {
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        gap: 4px;
+
+        .hp-edu-left {
+            width: auto;
+        }
+    }
+}
+
+// ─── Projects grid ────────────────────────────────────────────────────────────
+
+.hp-grid {
+    display: grid;
+    gap: 14px;
+
+    @media (min-width: 800px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.hp-card {
+    position: relative;
+    background-color: $background-color;
+    border: 1px solid $border-color;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 36px $shadow;
+        border-color: rgba(244, 81, 30, 0.22);
+    }
+
+    .hp-card-icons {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 6px;
+
+        svg {
+            fill: $text-primary-lighter-color;
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    .hp-card-title {
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.3;
+        margin: 0;
+
+        a {
+            color: $text-primary-color;
+            font-size: 15px;
+            font-weight: 700;
+            font-family: 'IBM Plex Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                border-radius: 12px;
+            }
+
+            &:hover {
+                color: $primary-color;
+                background-color: transparent;
+            }
+        }
+    }
+
+    .hp-card-excerpt {
+        font-size: 13px;
+        color: $text-primary-light-color;
+        line-height: 1.6;
+        flex: 1;
+        margin: 0;
+    }
+
+    .hp-card-tags {
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
-        .skill-item {
-            width: 45%;
-            h3 {
-                padding: 5px 10px;
-            }
-        }
-    }
-}
-@media (max-width: 800px) {
-    .skill-container {
-        display: flex;
-        flex-flow: column nowrap;
-    }
-
-    .skill-item {
-        h3 {
-            padding: 5px 10px;
-        }
+        margin-top: auto;
     }
 }
 
-.skill-container {
-    .skill-item {
-        margin-bottom: 15px;
-        a:hover {
-            h3 {
-                background-color: $link-hover;
-            }
-        }
-        h2 {
-            margin-bottom: 5px;
-        }
-        h3 {
-            display: flex;
-            flex-flow: row nowrap;
+// ─── Posts ────────────────────────────────────────────────────────────────────
+
+.hp-posts {
+    display: grid;
+    gap: 14px;
+
+    @media (min-width: 800px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.hp-post-card {
+    position: relative;
+    background-color: $surface-color;
+    border: 1px solid $border-color;
+    border-radius: 12px;
+    padding: 22px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 36px $shadow;
+        border-color: rgba(244, 81, 30, 0.22);
+    }
+
+    .hp-post-date {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 11px;
+        color: $text-primary-lighter-color;
+        letter-spacing: 0.04em;
+    }
+
+    .hp-post-title {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.3;
+        margin: 0;
+
+        a {
+            color: $text-primary-color;
             font-size: 16px;
-            font-weight: normal;
-            svg {
-                width: 15px;
-                height: 15px;
-                margin-left: 5px;
-                fill: $text-shadow-color;
+            font-weight: 700;
+            font-family: 'IBM Plex Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+
+            &::after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                border-radius: 12px;
+            }
+
+            &:hover {
+                color: $primary-color;
+                background-color: transparent;
             }
         }
-        .lvl {
-            display: flex;
-            align-self: center;
-            justify-content: flex-end;
-            flex: 1;
-        }
-        .lvl-fill {
-            @extend %lvl-shared;
-            background-color: $primary-color;
-        }
-        .lvl-empty {
-            @extend %lvl-shared;
-            background-color: $text-shadow-color;
-        }
+    }
+
+    .hp-post-excerpt {
+        font-size: 13px;
+        color: $text-primary-light-color;
+        line-height: 1.6;
+        flex: 1;
+        margin: 0;
+    }
+
+    .hp-card-tags {
+        display: flex;
+        flex-flow: row wrap;
+        margin-top: 4px;
     }
 }
 
-%lvl-shared {
-    @extend %lvl-shared;
+// ─── Skills (compact) ─────────────────────────────────────────────────────────
+
+.hp-skills-grid {
+    display: grid;
+    gap: 24px;
+
+    @media (min-width: 800px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 800px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.hp-skill-group {
+    .hp-skill-label {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 10px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: $text-primary-lighter-color;
+        margin: 0 0 10px;
+    }
+
+    .hp-skill-tags {
+        display: flex;
+        flex-flow: row wrap;
+    }
+}
+
+// ─── Level indicators (kept for reuse) ───────────────────────────────────────
+
+%lvl-dot {
     display: inline-block;
-    min-width: 10px;
-    min-height: 5px;
-    border-radius: 0%;
-    margin-left: 5px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.lvl-fill {
+    @extend %lvl-dot;
+    background-color: $primary-color;
+}
+
+.lvl-empty {
+    @extend %lvl-dot;
+    background-color: $text-shadow-color;
 }

@@ -1,12 +1,23 @@
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
-    font-family: "Arial";
+    box-sizing: border-box;
 }
 
 body {
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
     background-color: $background-color;
     color: $text-primary-color;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
 @media (min-width: 800px) {
@@ -30,7 +41,9 @@ article {
 
 #breadcrumbs {
     color: $text-primary-lighter-color;
-    font-size: 14px;
+    font-size: 12px;
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: 0.04em;
     a {
         color: $text-primary-lighter-color;
     }
@@ -42,18 +55,19 @@ article {
 
 section {
     #breadcrumbs {
-        margin-bottom: 15px;
+        margin-bottom: 24px;
     }
 }
 
 h1 {
-    font-size: 28px;
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
 a {
     color: $text-primary-color;
     text-decoration: none;
+    transition: color 0.15s ease;
 }
 a:link {
     text-decoration: none;
@@ -64,21 +78,24 @@ a:hover {
 }
 
 %tag-shared {
-    padding: 5px 10px;
-    border-radius: 10px;
+    display: inline-block;
+    padding: 4px 11px;
+    border-radius: 100px;
     color: $text-primary-color-invert !important;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    font-family: 'IBM Plex Sans', sans-serif;
+    transition: opacity 0.15s ease;
 }
 
 .tag {
     @extend %tag-shared;
-    font-size: 12px;
 }
 .tag-small {
     @extend %tag-shared;
-    font-size: 10px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    padding: 3px 6px;
+    font-size: 11px;
+    padding: 3px 9px;
 }
