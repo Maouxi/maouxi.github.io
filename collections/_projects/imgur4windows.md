@@ -9,7 +9,7 @@ display: true
 
 Client for imgur on windows 10 devices.
 
-[Download it from the microsoft store](https://www.microsoft.com/en-us/p/imgur4windows/9nblggh5wwsd#activetab=pivot:overviewtab)
+> **No longer available**: Imgur4Windows has been removed from the Microsoft Store and is no longer maintained.
 
 ## Features
 
@@ -33,8 +33,8 @@ Client for imgur on windows 10 devices.
 
 ## Screenshots
 
-|     |     |
-| :-: | :-: |
-| ![Imgur4Windows - Home]({{page.img_url}}screenshot1.jfif)  | ![Imgur4Windows - Details]({{page.img_url}}screenshot2.jfif)  |
-| ![Imgur4Windows - Comments]({{page.img_url}}screenshot3.jfif)  | ![Imgur4Windows - Upload]({{page.img_url}}screenshot4.jfif)  |
-| ![Imgur4Windows - User]({{page.img_url}}screenshot5.jfif)  | ![Imgur4Windows - Settings]({{page.img_url}}screenshot6.jfif)  |
+|                                                               |                                                               |
+| :-----------------------------------------------------------: | :-----------------------------------------------------------: |
+|   ![Imgur4Windows - Home]({{page.img_url}}screenshot1.jfif)   | ![Imgur4Windows - Details]({{page.img_url}}screenshot2.jfif)  |
+| ![Imgur4Windows - Comments]({{page.img_url}}screenshot3.jfif) |  ![Imgur4Windows - Upload]({{page.img_url}}screenshot4.jfif)  |
+|   ![Imgur4Windows - User]({{page.img_url}}screenshot5.jfif)   | ![Imgur4Windows - Settings]({{page.img_url}}screenshot6.jfif) |

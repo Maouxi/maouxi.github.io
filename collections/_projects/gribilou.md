@@ -11,8 +11,8 @@ Kids' drawings, kept and shared with the family
 
 Paper fades, the memory stays. Gribilou keeps all your kids' drawings in one place: snapped, sorted for you and shared with the whole family. Grandma and Grandpa get every new masterpiece on their phone.
 
-|                                                          |                                                             |                                                           |                                                           |                                                          |
-| :------------------------------------------------------: | :---------------------------------------------------------: | :-------------------------------------------------------: | :-------------------------------------------------------: | :------------------------------------------------------: |
+|                                                                 |                                                          |                                                         |                                                            |                                                        |
+| :-------------------------------------------------------------: | :------------------------------------------------------: | :-----------------------------------------------------: | :--------------------------------------------------------: | :----------------------------------------------------: |
 | ![Gribilou - Latest drawings]({{page.img_url}}screenshot1.webp) | ![Gribilou - Timeline]({{page.img_url}}screenshot2.webp) | ![Gribilou - Drawing]({{page.img_url}}screenshot3.webp) | ![Gribilou - Child page]({{page.img_url}}screenshot4.webp) | ![Gribilou - Family]({{page.img_url}}screenshot5.webp) |
 
 {::nomarkdown}
@@ -23,7 +23,7 @@ Paper fades, the memory stays. Gribilou keeps all your kids' drawings in one pla
 
 |     {::nomarkdown}<svg  role="img" viewBox="0 0 24 24" class="icon big">{{googleplay-icon.svg}}</svg>{:/}     | {::nomarkdown}<svg role="img" viewBox="0 0 24 24" class="icon big">{{appstore-icon.svg}}</svg>{:/} | {::nomarkdown}<svg role="img" viewBox="0 0 24 24" class="icon big">{{web-icon.svg}}</svg>{:/} |
 | :-----------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------: |
-| [Download on Google Play](https://play.google.com/store/apps/details?id=com.maoux.gribilou){:target="_blank"} | [Download on AppStore](https://apps.apple.com/app/id6823103192){:target="_blank"}                  |                  [Website](https://gribilou.com){:target="_blank"}                            |
+| [Download on Google Play](https://play.google.com/store/apps/details?id=com.maoux.gribilou){:target="_blank"} |         [Download on AppStore](https://apps.apple.com/app/id6823103192){:target="_blank"}          |                       [Website](https://gribilou.com){:target="_blank"}                       |
 
 ## Snap it, it's sorted
 

@@ -3,15 +3,17 @@ title: Tournesol
 date: 05/01/2024
 img_url: /assets/img/projects/tournesol/
 icons: [flutter, firebase]
-skills: [Flutter, Firebase, Dart, Azure Devops, Git]
+skills: [Flutter, Firebase, Dart, TypeScript, Azure Devops, Git]
 display: true
 ---
 
-Simplify event planning by sharing the packing list. No more stress about what is missing or what you absolutely must have!
+Never forget anything at an event again
 
-|                                                      |                                                       |                                                            |                                                        |
-| :--------------------------------------------------: | :---------------------------------------------------: | :--------------------------------------------------------: | :----------------------------------------------------: |
-| ![Tournesol - Home]({{page.img_url}}screenshot1.png) | ![Tournesol - Event]({{page.img_url}}screenshot2.png) | ![Tournesol - Event item]({{page.img_url}}screenshot3.png) | ![Tournesol - Recipe]({{page.img_url}}screenshot4.png) |
+A picnic, a birthday, a ski weekend: Tournesol lets you share the list of things to bring with every participant. Everyone says what they bring, no duplicates, nothing missing.
+
+|                                                  |                                                  |                                                                |                                                    |
+| :----------------------------------------------: | :----------------------------------------------: | :------------------------------------------------------------: | :------------------------------------------------: |
+| ![Tournesol - Events]({{page.img_url}}home.webp) | ![Tournesol - Event]({{page.img_url}}event.webp) | ![Tournesol - Who brings what]({{page.img_url}}eventitem.webp) | ![Tournesol - Recipe]({{page.img_url}}recipe.webp) |
 
 {::nomarkdown}
 {% assign googleplay-icon = site.data.icons | where_exp: "i", "i.tag == 'googleplay'" | first %}
@@ -23,15 +25,38 @@ Simplify event planning by sharing the packing list. No more stress about what i
 | :------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------: |
 | [Download on Google Play](https://play.google.com/store/apps/details?id=com.maoux.tournesol){:target="_blank"} | [Download on AppStore](https://apps.apple.com/us/app/my-tournesol/id6475875443){:target="_blank"}  |                  [Web app](https://tournesol-app.web.app/){:target="_blank"}                  |
 
-## Description
+## Who brings what
 
-Tournesol is the perfect app for organizing your events without hassle.
+- Create an event and share it with the participants.
+- Each participant says what they bring, with the quantity.
+- A progress bar shows what is already covered and what is still missing.
+- Assign an item to someone else when you organize for the group.
 
-Whether it's a picnic, a birthday party, or a family gathering, Tournesol lets you create events and easily share the list of items to bring with other participants.
+## Meals and ingredients
 
-Each participant can indicate what they are already bringing, avoiding duplicates and forgetfulness. Say goodbye to last-minute stress and unexpected shopping trips! With Tournesol, you can focus on what matters most: enjoying your event with peace of mind.
+- Recipes are sets of ingredients you add to an event, like "Raclette for 4".
+- Quantities adjust to the number of participants.
+- Templates let you reuse a whole event, like your yearly ski weekend.
 
-Download Tournesol now and discover a new way to organize your events!
+## For everyone, everywhere
+
+- iOS, Android and a web app: participants don't even need to install anything.
+- Invited to an event? Continue without an account to see who brings what.
+- Create an account to keep your events and recipes on all your devices.
+- Notifications when the event list changes.
+
+## Free to start
+
+- Free: everything you need to get started.
+- Premium, monthly, annual or lifetime: unlimited events, templates, recipes and participants, and quantities adjusted by participant count.
+
+## Under the hood
+
+- **App**: Flutter (iOS, Android and web) in a Dart + Melos workspace.
+- **Backend**: Firebase (Auth, Firestore, Cloud Functions in TypeScript, Hosting).
+- **Purchases**: RevenueCat, with a webhook as the source of truth for Premium.
+
+Tournesol started in 2018 as an Android app, an Angular web app and a .NET Core API hosted on Azure, before being rebuilt in Flutter and Firebase.
 
 ## Question or support request
 

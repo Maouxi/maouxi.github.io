@@ -7,38 +7,58 @@ skills: [Flutter, Firebase, Dart, Git]
 display: true
 ---
 
-AI Coloring Pages from Photos
+Your photos as coloring pages
 
-Koloritoo transforms your favorite photos into beautiful, printable coloring pages — powered by AI, ready in seconds.
+Import a photo, choose your style, and get a unique coloring page, ready to print, in seconds. A family portrait, a beloved pet, a favorite place: all your memories can become a coloring page.
 
-Whether it's a family portrait, a beloved pet, a stunning landscape, or a fun snapshot, just upload your photo and let Koloritoo do the magic. In a few seconds, you'll have a clean, high-quality black-and-white coloring page ready to print and enjoy.
+|                                                       |                                                                 |                                                                |                                                          |                                                          |
+| :---------------------------------------------------: | :-------------------------------------------------------------: | :------------------------------------------------------------: | :------------------------------------------------------: | :------------------------------------------------------: |
+| ![Koloritoo - Home]({{page.img_url}}screenshot5.webp) | ![Koloritoo - Choose a style]({{page.img_url}}screenshot2.webp) | ![Koloritoo - Coloring page]({{page.img_url}}screenshot1.webp) | ![Koloritoo - Gallery]({{page.img_url}}screenshot3.webp) | ![Koloritoo - Profile]({{page.img_url}}screenshot4.webp) |
 
-[Landing page](https://koloritoo.firebaseapp.com/)
+{::nomarkdown}
+{% assign googleplay-icon = site.data.icons | where_exp: "i", "i.tag == 'googleplay'" | first %}
+{% assign appstore-icon = site.data.icons | where_exp: "i", "i.tag == 'appstore'" | first %}
+{% assign web-icon = site.data.icons | where_exp: "i", "i.tag == 'web'" | first %}
+{:/}
 
-## HOW IT WORKS
+|     {::nomarkdown}<svg  role="img" viewBox="0 0 24 24" class="icon big">{{googleplay-icon.svg}}</svg>{:/}      | {::nomarkdown}<svg role="img" viewBox="0 0 24 24" class="icon big">{{appstore-icon.svg}}</svg>{:/} | {::nomarkdown}<svg role="img" viewBox="0 0 24 24" class="icon big">{{web-icon.svg}}</svg>{:/} |
+| :------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------: |
+| [Download on Google Play](https://play.google.com/store/apps/details?id=com.maoux.koloritoo){:target="_blank"} |    [Download on AppStore](https://apps.apple.com/app/koloritoo/id6760719326){:target="_blank"}     |                      [Website](https://koloritoo.com){:target="_blank"}                       |
 
-1. Pick any photo from your gallery or take a new one.
-2. Choose a style suited to your age group.
-3. Download, print, and start coloring!
+## How it works
 
-## STYLES FOR EVERY AGE
+1. Choose a photo: portraits, animals, landscapes, everyday objects…
+2. Choose your style: Classic for a clean, beautiful line, Kawaii for something cute, Cartoon for a fun touch.
+3. Generate the coloring page: the magic happens before your eyes.
+4. Download, print, and color!
 
-- Toddler — Ultra-simplified line art with large shapes, perfect for the little ones.
-- Kid — Balanced detail and fun lines, ideal for school-age children.
-- Adult — Intricate, complex artwork for a relaxing and immersive coloring experience.
+## Color together what truly matters
 
-## KEY FEATURES
+- Works with any photo: all your memories can become a coloring page.
+- Three styles, three moods: gentle, fun or timeless.
+- Print-ready: the file is optimized for home printing at A4 quality, or export it as PNG or PDF.
+- A gift like no other: a portrait of their pet or their favorite place, personalized and printable in under a minute.
 
-- AI-powered conversion — Our advanced AI produces clean, detailed line art from any photo: portraits, pets, landscapes, and more.
-- Instant results — Generation takes just a few seconds. Your coloring page is ready almost immediately.
-- High-quality export — Save to your gallery or export a print-ready file to share with family and friends.
-- Simple credit system — Get free credits when you sign up. Buy more whenever you need — they never expire.
-- Sign in with Apple or Google — Quick and secure account creation in one tap.
-- Private by design — Your photos are used only to generate your coloring page. They are never shared or sold.
+## Your memories stay yours
 
-## PERFECT FOR
+- Photos are only used to generate your coloring page.
+- They are never stored, shared or sold.
+- Sign in with Apple or Google in one tap.
 
-- Parents looking for creative activities for their children
-- Teachers creating personalized classroom materials
-- Adults who love mindful coloring and relaxation
-- Anyone who wants to turn memories into unique art
+## Free to start
+
+- Your first credits are free, no card required.
+- Four credit packs when you need more: Welcome, Explorer, Family and Studio.
+- Purchased credits never expire.
+
+## Question or support request
+
+[Read the FAQ](https://koloritoo.com/faq.html){:target="_blank"}
+
+[Contact the support](mailto:contact@koloritoo.com)
+
+## Legal
+
+[Privacy policy](https://koloritoo.com/privacy-policy.html){:target="_blank"}
+
+[Terms & conditions](https://koloritoo.com/terms.html){:target="_blank"}

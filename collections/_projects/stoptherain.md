@@ -10,7 +10,19 @@ An app that stops the rain. Seriously.
 
 One button: **STOP THE RAIN**. Press it, and the app "intervenes" with an answer that really depends on the current weather and the short-term forecast.
 
-> 🚧 **Work in progress**: StopTheRain is being rebuilt from scratch for iOS and Android. The first version (2019) was a Flutter experiment and has been unpublished.
+|                                                                         |                                                                             |                                                                           |
+| :---------------------------------------------------------------------: | :-------------------------------------------------------------------------: | :-----------------------------------------------------------------------: |
+| ![StopTheRain - Home]({{page.img_url}}home.webp){:style="width:240px;"} | ![StopTheRain - Answer]({{page.img_url}}answer.webp){:style="width:240px;"} | ![StopTheRain - Queue]({{page.img_url}}queue.webp){:style="width:240px;"} |
+
+{::nomarkdown}
+{% assign googleplay-icon = site.data.icons | where_exp: "i", "i.tag == 'googleplay'" | first %}
+{% assign appstore-icon = site.data.icons | where_exp: "i", "i.tag == 'appstore'" | first %}
+{% assign web-icon = site.data.icons | where_exp: "i", "i.tag == 'web'" | first %}
+{:/}
+
+|      {::nomarkdown}<svg  role="img" viewBox="0 0 24 24" class="icon big">{{googleplay-icon.svg}}</svg>{:/}       | {::nomarkdown}<svg role="img" viewBox="0 0 24 24" class="icon big">{{appstore-icon.svg}}</svg>{:/} | {::nomarkdown}<svg role="img" viewBox="0 0 24 24" class="icon big">{{web-icon.svg}}</svg>{:/} |
+| :--------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------: |
+| [Download on Google Play](https://play.google.com/store/apps/details?id=com.maoux.stoptherain){:target="_blank"} |         [Download on AppStore](https://apps.apple.com/app/id6832487647){:target="_blank"}          |                [Website](https://stoptherain-a9039.web.app){:target="_blank"}                 |
 
 ## The concept
 
@@ -37,6 +49,14 @@ One button: **STOP THE RAIN**. Press it, and the app "intervenes" with an answer
 - **Accounts**: automatic anonymous sign-in, optional Sign in with Apple / Google to keep your progression.
 - **Purchases**: RevenueCat, with a webhook as the source of truth for Premium.
 
+## Question or support request
+
+[Contact the support](mailto:stoptherain-app@outlook.com)
+
+## Legal
+
+[Privacy policy](https://stoptherain-a9039.web.app/privacy){:target="_blank"}
+
 ## The 2019 version
 
 The original StopTheRain was a one-button app made to try the Flutter framework: adjust how sensitive you are to the rain, then get a prediction of when it stops (or how long it stays sunny), with one prediction credit per hour.
@@ -44,9 +64,3 @@ The original StopTheRain was a one-button app made to try the Flutter framework:
 |                                                                               |                                                                                     |                                                                               |
 | ----------------------------------------------------------------------------: | :---------------------------------------------------------------------------------: | :---------------------------------------------------------------------------- |
 | ![StopTheRain - Home]({{page.img_url}}screenshot1.png){:style="width:220px;"} | ![StopTheRain - Prediction]({{page.img_url}}screenshot3.png){:style="width:275px;"} | ![StopTheRain - Menu]({{page.img_url}}screenshot2.png){:style="width:220px;"} |
-
-Legal documents of the 2019 version:
-
-[Privacy policy](/projects/stoptherain/stoptherain-privacy)
-
-[Terms & conditions](/projects/stoptherain/stoptherain-terms)

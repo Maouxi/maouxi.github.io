@@ -1,103 +1,67 @@
 ---
 title: IsMyServerOnline
-date: 15/04/2020
+date: 24/11/2026
 img_url: /assets/img/projects/ismyserveronline/
-icons: [android]
-skills: [Android, Kotlin, Azure Devops, Git]
+icons: [android, firebase]
+skills: [Android, Kotlin, Firebase, Git]
 display: true
 ---
-Monitor your servers status within an Android application.
+Know the moment your server goes down.
 
-|                                                              |                                                                       |                                                                        |                                                                  |                                                                              |
-| :----------------------------------------------------------: | :-------------------------------------------------------------------: | :--------------------------------------------------------------------: | :--------------------------------------------------------------: | :--------------------------------------------------------------------------: |
-| ![IsMyServerOnline - Home]({{page.img_url}}screenshot1.webp) | ![IsMyServerOnline - Notifications]({{page.img_url}}screenshot2.webp) | ![IsMyServerOnline - Server details]({{page.img_url}}screenshot3.webp) | ![IsMyServerOnline - Settings]({{page.img_url}}screenshot4.webp) | ![IsMyServerOnline - Server configuration]({{page.img_url}}screenshot5.webp) |
+IMSO checks your servers and websites in the background and alerts you by push or email when something changes. Uptime, ping, SSL and domain expiry, all from your Android phone.
+
+|                                                                    |                                                                       |                                                                        |                                                                |                                                                  |                                                                     |
+| :----------------------------------------------------------------: | :-------------------------------------------------------------------: | :--------------------------------------------------------------------: | :------------------------------------------------------------: | :--------------------------------------------------------------: | :-----------------------------------------------------------------: |
+| ![IsMyServerOnline - My servers]({{page.img_url}}screenshot1.webp) | ![IsMyServerOnline - Notifications]({{page.img_url}}screenshot2.webp) | ![IsMyServerOnline - Server details]({{page.img_url}}screenshot3.webp) | ![IsMyServerOnline - Widget]({{page.img_url}}screenshot4.webp) | ![IsMyServerOnline - Settings]({{page.img_url}}screenshot5.webp) | ![IsMyServerOnline - Edit server]({{page.img_url}}screenshot6.webp) |
 
 {::nomarkdown}
 {% assign googleplay-icon = site.data.icons | where_exp: "i", "i.tag == 'googleplay'" | first %}
-{% assign amazon-icon = site.data.icons | where_exp: "i", "i.tag == 'amazon'" | first %}
+{% assign web-icon = site.data.icons | where_exp: "i", "i.tag == 'web'" | first %}
 {:/}
 
-|         {::nomarkdown}<svg  role="img" viewBox="0 0 24 24" class="icon big">{{googleplay-icon.svg}}</svg>{:/}         |                                                                           {::nomarkdown}<svg role="img" viewBox="0 0 24 24" class="icon big">{{amazon-icon.svg}}</svg>{:/}                                                                            |
-| :-------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| [Download on Google Play](https://play.google.com/store/apps/details?id=com.maoux.ismyserveronline){:target="_blank"} | [Download on Amazon AppStore](https://www.amazon.fr/My-Server-Online-Monitorez-serveurs/dp/B088193K9W/ref=sr_1_1?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=ismyserveronline&qid=1597831390&s=mobile-apps&sr=1-1){:target="_blank"} |
+|         {::nomarkdown}<svg  role="img" viewBox="0 0 24 24" class="icon big">{{googleplay-icon.svg}}</svg>{:/}         | {::nomarkdown}<svg role="img" viewBox="0 0 24 24" class="icon big">{{web-icon.svg}}</svg>{:/} |
+| :-------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------: |
+| [Download on Google Play](https://play.google.com/store/apps/details?id=com.maoux.ismyserveronline){:target="_blank"} |                 [Website](https://ismyserveronline.web.app){:target="_blank"}                 |
 
-## Features
+## Add a server, IMSO watches it for you
 
-- Display a server status with last status.
-- Display server detail page with full status history and a latency chart for the last 24h.
-- Displays a detailed message in case of error/timeout during connection.
-- Add servers / website via their IP address or web domain name.
-- Supports HTTP and HTTPS protocols.
-- Support TCP protocol with port specification.
-- Support PING/PING6 command with packet size and ttl configuration.
-- Configurable auto-refresh at specified interval, timeout, retry count and interval between retry, returned http code check, refresh on wifi only, refresh with a min signal quality.
-- Notification on server status change or when updated
-- Light and Dark theme.
+- Websites over HTTP and HTTPS, with HTTP code and response content checks.
+- Servers on any TCP or UDP port.
+- Machines with ping and ping6, with configurable TTL and packet size.
+- Checks run from your phone: monitor your NAS or Raspberry Pi on your local network too.
+
+## Understand what happened
+
+- Uptime statistics, full status history and a latency graph for each server.
+- A clear error message when a check fails: timeout, connection refused, invalid code…
+- See when the SSL certificate and the domain name expire, with a WHOIS summary.
+
+## Know as soon as something goes down
+
+- Background checks at the interval you choose, from every minute to once a day.
+- A push notification or an email on every check, or only when a status changes.
+- Check only on Wi-Fi or mobile data, or above a minimum signal quality.
+- Your servers on the home screen with widgets.
+
+## Free to monitor
+
+- Free: unlimited servers, push notifications, history and widgets. No ads, no sign-up.
+- PRO, monthly or lifetime: email alerts, SSL and domain expiry reminders, folders, 30-day latency graph and full history export.
 
 ## Development
 
-Develop in kotlin with intensive usage of [coroutine](https://developer.android.com/kotlin/coroutines){:target="_blank"}. Follow the MVVM architecture with [android architecture component](https://developer.android.com/topic/libraries/architecture/){:target="_blank"} (LiveData - ViewModel - Room) and use dependency injection with [Koin](https://insert-koin.io/){:target="_blank"}.
+Developed in Kotlin with intensive usage of [coroutines](https://developer.android.com/kotlin/coroutines){:target="_blank"}. Follows the MVVM architecture with [Android Architecture Components](https://developer.android.com/topic/libraries/architecture/){:target="_blank"} (LiveData - ViewModel - Room) and uses dependency injection with [Koin](https://insert-koin.io/){:target="_blank"}. Email alerts are sent by a Firebase Cloud Function, and purchases use Google Play Billing.
 
-The biggest challenge was to handle Android background tasks to refresh servers status. It use Android [worker](https://developer.android.com/reference/androidx/work/Worker){:target="_blank"} but it wasn't enougth so it also use the basic android [alarm manager](https://developer.android.com/reference/android/app/AlarmManager){:target="_blank"}.
-I thinking about writting an article on how to achieve this correclty.
+The biggest challenge was to handle Android background tasks to refresh servers status. It uses Android [WorkManager](https://developer.android.com/reference/androidx/work/Worker){:target="_blank"}, but it wasn't enough, so it also uses the Android [AlarmManager](https://developer.android.com/reference/android/app/AlarmManager){:target="_blank"}.
 
-I also had some difficulties to get the mobile signal quality. I write an article about that [here](/blog/2020/08/android-signal-quality).
+I also had some difficulties to get the mobile signal quality. I wrote an article about that [here](/blog/2020/08/android-signal-quality).
 
-## Devops
+## Question or support request
 
-Fully integrate on [Azure Devops](https://azure.microsoft.com/fr-fr/services/devops/){:target="_blank"}.
-
-|                                                                                                      |
-| :--------------------------------------------------------------------------------------------------: |
-| ![IsMyServerOnline - Devops dashboard]({{page.img_url}}devops-dashboard.webp){:style="width: 800px"} |
-|                               Azure devops IsMyServerOnline dashboard                                |
-
-### Boards
-
-Use Kanban (Todo, doing, done) to follow bugs and new features.
-
-|                                                                                                    |
-| :------------------------------------------------------------------------------------------------: |
-| ![IsMyServerOnline - Devops kaban board]({{page.img_url}}devops-board.webp){:style="width: 800px"} |
-|                             Azure devops IsMyServerOnline Kaban board                              |
-
-### Repository
-
-One git repository on Azure Devops. Usage of git flow.
-
-#### Pipelines
-
-_Build_
-
-One build pipeline write in yaml (to keep history on the git repository) that trigger on the develop and release/* branches.
-This pipeline:
-
-- Build the project
-- Create the release apk signed and unsigned
-- Create the release app bundle (aab) signed and unsigned
-- Execute unit test and instrumented test (on simulator)
-- Execute the code coverage (with unit and instrumented tests using [Jacoco](https://www.jacoco.org/jacoco/){:target="_blank"})
-
-|                                                                                              |
-| :------------------------------------------------------------------------------------------: |
-| ![IsMyServerOnline - Devops build]({{page.img_url}}devops-build.webp){:style="width: 800px"} |
-|                          Azure devops IsMyServerOnline build result                          |
-
-_Release_
-
-Two release pipeline. One for the Google PlayStore, one for the Amazon AppStore.
-
-The Amazon AppStore release use the [Amazon Devops Extensions](/projects/amazondevopsextensions) I made. It prepare the release and then publish it. It has only one manual task between the too steps, update the application description and changelog.
-
-The Google PlayStore release is fully automatized from the testing release to the production release. It use the metadata files hierarchy to update the PlayStore description.
-
-|                                                                                                            |
-| :--------------------------------------------------------------------------------------------------------: |
-| ![IsMyServerOnline - Devops release playstore]({{page.img_url}}devops-release.webp){:style="width: 800px"} |
-|                              Azure devops IsMyServerOnline release PlayStore                               |
+[Contact the support](mailto:ismyserveronline-app@outlook.com)
 
 ## Legal
 
-[Privacy policy](/projects/ismyserveronline/ismyserveronline-privacy)
+[Privacy policy](https://ismyserveronline.web.app/privacy){:target="_blank"}
 
-[Terms & conditions](/projects/ismyserveronline/ismyserveronline-terms)
+[Terms & conditions](https://ismyserveronline.web.app/terms){:target="_blank"}
